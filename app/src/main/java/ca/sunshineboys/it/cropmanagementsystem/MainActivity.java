@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed(){
         AlertDialog.Builder DIA1 = new AlertDialog.Builder(this);
         DIA1.setTitle("Exit Application?");
+        DIA1.setIcon(R.drawable.alert_icon);
         DIA1.setMessage("Are you sure you want to exit the application?");
         DIA1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
