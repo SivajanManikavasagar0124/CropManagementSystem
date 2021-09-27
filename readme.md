@@ -7,7 +7,7 @@ Team leader in charge of delegation, app development, and planning.
 
 ## Muhammad Qamar n01344609
 Sensor calibration and data analysis.
-## Noha Philips n0135133
+## Noha Philips n01351336
 Documentation and Product design.
 ## Tanvir Pahwa n01245843
 
