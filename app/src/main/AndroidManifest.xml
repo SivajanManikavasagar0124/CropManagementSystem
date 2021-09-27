@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CropManagementSystem">
         <activity
-            android:name=".MainActivity"
+            android:name=".SunshineMain"
             android:label="@string/app_name"
             android:theme="@style/Theme.CropManagementSystem.NoActionBar">
             <intent-filter>

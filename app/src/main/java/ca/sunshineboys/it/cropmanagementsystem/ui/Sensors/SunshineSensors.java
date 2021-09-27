@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.home;
+package ca.sunshineboys.it.cropmanagementsystem.ui.Sensors;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ca.sunshineboys.it.cropmanagementsystem.R;
 
-public class HomeFragment extends Fragment {
+public class SunshineSensors extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private SensorsViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+                new ViewModelProvider(this).get(SensorsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.slideshow;
+package ca.sunshineboys.it.cropmanagementsystem.ui.Water;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ca.sunshineboys.it.cropmanagementsystem.R;
 
-public class SlideshowFragment extends Fragment {
+public class SunshineWater extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private WaterViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+                new ViewModelProvider(this).get(WaterViewModel.class);
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
         final TextView textView = root.findViewById(R.id.text_slideshow);
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

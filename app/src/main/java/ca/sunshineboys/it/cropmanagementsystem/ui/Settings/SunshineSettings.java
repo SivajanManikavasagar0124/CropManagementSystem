@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.gallery;
+package ca.sunshineboys.it.cropmanagementsystem.ui.Settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ca.sunshineboys.it.cropmanagementsystem.R;
 
-public class GalleryFragment extends Fragment {
+public class SunshineSettings extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private SettingsViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+                new ViewModelProvider(this).get(SettingsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

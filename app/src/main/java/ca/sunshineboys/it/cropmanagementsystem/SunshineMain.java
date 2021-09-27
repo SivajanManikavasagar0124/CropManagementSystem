@@ -1,5 +1,12 @@
 package ca.sunshineboys.it.cropmanagementsystem;
-
+/*
+Sivajan Manikavasagar (Team Leader) N01240148
+Muhammad Qamar N01344609
+Noha Philips N01351336
+Tanvir Pahwa N01245843
+CENG 322 - RNC/D
+CENG 317 - 0NF
+ */
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +25,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+public class SunshineMain extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -72,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         DIA1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                MainActivity.this.finish();
+                SunshineMain.this.finish();
             }
         });
         DIA1.setNegativeButton("Stay", new DialogInterface.OnClickListener() {
