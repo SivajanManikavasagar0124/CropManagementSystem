@@ -19,4 +19,8 @@
 
     <string name="comment1">Replace with your own action</string>
     <string name="comment2">Again</string>
+    <string name="exitapp">Exit Application?</string>
+    <string name="dialogtitle">Are you sure you want to exit the application?</string>
+    <string name="stay">Stay</string>
+    <string name="yes">Yes</string>
 </resources>

@@ -73,16 +73,16 @@ public class SunshineMain extends AppCompatActivity {
 
     public void onBackPressed(){
         AlertDialog.Builder DIA1 = new AlertDialog.Builder(this);
-        DIA1.setTitle("Exit Application?");
+        DIA1.setTitle(R.string.exitapp);
         DIA1.setIcon(R.drawable.alert_icon);
-        DIA1.setMessage("Are you sure you want to exit the application?");
-        DIA1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        DIA1.setMessage(R.string.dialogtitle);
+        DIA1.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 SunshineMain.this.finish();
             }
         });
-        DIA1.setNegativeButton("Stay", new DialogInterface.OnClickListener() {
+        DIA1.setNegativeButton(R.string.stay, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

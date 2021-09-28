@@ -5,15 +5,22 @@
     CENG 322 - RNC/D
     CENG 317 - 0NF/-->
 <resources>
-    <string name="app_name">Système de gestion des cultures</string>
+    <string name="app_name">Crop Management System</string>
     <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">En-tête de navigation</string>
-    <string name="action_settings">Paramètres</string>
+    <string name="action_settings">Réglage</string>
 
-    <string name="menu_home">Accueil</string>
+    <string name="menu_home">Maison</string>
     <string name="menu_gallery">Galerie</string>
-    <string name="menu_slideshow">Diaporama</string>
+    <string name="menu_slideshow">Photos</string>
+
+    <string name="comment1">Replace with your own action</string>
+    <string name="comment2">Again</string>
+    <string name="exitapp">Sortir?</string>
+    <string name="dialogtitle">Êtes-vous sûr de vouloir quitter application?</string>
+    <string name="stay">Rester</string>
+    <string name="yes">Oui</string>
 </resources>
