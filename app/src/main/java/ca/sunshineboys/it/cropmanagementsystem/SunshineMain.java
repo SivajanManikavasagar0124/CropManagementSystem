@@ -39,8 +39,8 @@ public class SunshineMain extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "@string/comment1", Snackbar.LENGTH_LONG)
+                        .setAction("@string/comment2", null).show();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
