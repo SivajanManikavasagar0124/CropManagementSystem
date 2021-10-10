@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970405047282",
+    "project_id": "cropmanagementsys",
+    "storage_bucket": "cropmanagementsys.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970405047282:android:e59c343508bc64ec86196b",
+        "android_client_info": {
+          "package_name": "ca.sunshineboys.it.cropmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970405047282-v5lsakqdlkde2p9tqhdo57ilqips6cm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU2-fK0rkUMo4KzNgKDSqT-TgC0uCivlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970405047282-v5lsakqdlkde2p9tqhdo57ilqips6cm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

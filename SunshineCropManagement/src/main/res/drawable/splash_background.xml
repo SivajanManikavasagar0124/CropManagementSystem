@@ -5,7 +5,7 @@
             android:drawable="@drawable/bg_gradient"/>
         <item>
             <bitmap android:gravity="center"
-                android:src="@drawable/alert_icon"/>
+                    android:src="@drawable/alert_icon"/>
         </item>
 
 
