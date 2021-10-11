@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/IndianRed"
+    android:background="@color/PaleGreen"
     tools:context=".ui.CropTemperature.CropTemperature">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginBottom="630dp"
         android:text="@string/NohaTV1"
         android:textColor="@color/Sienna"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:background="@color/PowderBlue"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginTop="383dp"
         android:layout_marginBottom="297dp"
         android:text="@string/NohaS1"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:background="@color/CadetBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
         android:text="@string/NohaTV2"
         android:background="@color/black"
         android:textColor="@color/Yellow"
-        android:textSize="100dp"
+        android:textSize="100sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

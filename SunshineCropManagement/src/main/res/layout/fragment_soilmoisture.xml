@@ -13,7 +13,7 @@ CENG 317 - 0NF
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.SoilMoisture.SoilMoisture"
-    android:background="@color/LightBlue">
+    android:background="@color/PaleGreen">
 
     <TextView
         android:textStyle="bold"
