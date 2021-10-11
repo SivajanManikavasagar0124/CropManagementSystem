@@ -31,5 +31,7 @@
 
     <string name="NohaTV1">température de récolte </string>
     <string name="NohaS1">Celsius ou Fahrenheit </string>
+    <string name="NohaTV2">34 </string>
+
 
 </resources>

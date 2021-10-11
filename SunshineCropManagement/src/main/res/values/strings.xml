@@ -31,5 +31,7 @@
 
     <string name="NohaTV1">Crop Temperature </string>
     <string name="NohaS1">Celsius or Fahrenheit </string>
+    <string name="NohaTV2">34 </string>
+    <string name="NohaB1" translatable="false"> GG EZ GO NEXT </string>
 
 </resources>

@@ -14,9 +14,10 @@
         android:layout_marginTop="49dp"
         android:layout_marginBottom="630dp"
         android:text="@string/NohaTV1"
-        android:textColor="@color/white"
+        android:textColor="@color/Sienna"
         android:textSize="32dp"
         android:textStyle="bold"
+        android:background="@color/PowderBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -45,10 +46,44 @@
         android:layout_marginBottom="297dp"
         android:text="@string/NohaS1"
         android:textSize="22dp"
+        android:background="@color/CadetBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/NohaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="502dp"
+        android:layout_marginBottom="181dp"
+        android:text="@string/NohaB1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NohaTextView2"
+        android:layout_width="173dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="385dp"
+        android:text="@string/NohaTV2"
+        android:background="@color/black"
+        android:textColor="@color/Yellow"
+        android:textSize="100dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
