@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.Water;
+package ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,15 +22,15 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
-public class SunshineWater extends Fragment {
+public class SoilMoisture extends Fragment {
 
-    private WaterViewModel slideshowViewModel;
+    private MoistureViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
-                new ViewModelProvider(this).get(WaterViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+                new ViewModelProvider(this).get(MoistureViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_soilmoisture, container, false);
         final TextView textView = root.findViewById(R.id.text_slideshow);
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

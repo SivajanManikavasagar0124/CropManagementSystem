@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.Water;
+package ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -11,11 +11,11 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
-public class WaterViewModel extends ViewModel {
+public class MoistureViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public WaterViewModel() {
+    public MoistureViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("Placeholder");
     }
