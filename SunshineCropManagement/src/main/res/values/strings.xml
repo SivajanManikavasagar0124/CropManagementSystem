@@ -24,4 +24,7 @@
     <string name="dialogtitle">Are you sure you want to exit the application?</string>
     <string name="stay">Stay</string>
     <string name="yes">Yes</string>
+
+    <string name="text1_soil">Soil Moisture Fragment</string>
+    <string name="btn1_soil">Measure Moisture</string>
 </resources>

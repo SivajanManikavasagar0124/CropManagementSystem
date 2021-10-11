@@ -24,4 +24,8 @@
     <string name="dialogtitle">Êtes-vous sûr de vouloir quitter application?</string>
     <string name="stay">Rester</string>
     <string name="yes">Oui</string>
+
+    <string name="text1_soil">Fragment d'humidité du sol</string>
+    <string name="btn1_soil">Mesurer l'humidité</string>
+
 </resources>
