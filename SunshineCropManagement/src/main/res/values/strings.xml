@@ -27,4 +27,5 @@
 
     <string name="text1_soil">Soil Moisture Fragment</string>
     <string name="btn1_soil">Measure Moisture</string>
+    <string name="swtch1_soil">Connected: </string>
 </resources>
