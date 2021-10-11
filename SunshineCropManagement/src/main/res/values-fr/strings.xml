@@ -30,4 +30,6 @@
     <string name="swtch1_soil">Connecté: </string>
 
     <string name="NohaTV1">température de récolte </string>
+    <string name="NohaS1">Celsius ou Fahrenheit </string>
+
 </resources>

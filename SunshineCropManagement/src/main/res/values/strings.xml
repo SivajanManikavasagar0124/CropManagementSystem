@@ -30,5 +30,6 @@
     <string name="swtch1_soil">Connected: </string>
 
     <string name="NohaTV1">Crop Temperature </string>
+    <string name="NohaS1">Celsius or Fahrenheit </string>
 
 </resources>
