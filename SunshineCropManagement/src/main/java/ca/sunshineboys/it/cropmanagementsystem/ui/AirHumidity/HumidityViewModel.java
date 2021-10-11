@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.Sensors;
+package ca.sunshineboys.it.cropmanagementsystem.ui.AirHumidity;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -11,11 +11,11 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
-public class SensorsViewModel extends ViewModel {
+public class HumidityViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SensorsViewModel() {
+    public HumidityViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("Placeholder");
     }
