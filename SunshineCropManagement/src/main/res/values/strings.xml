@@ -33,5 +33,7 @@
     <string name="NohaS1">Celsius or Fahrenheit </string>
     <string name="NohaTV2">34 </string>
     <string name="NohaB1" translatable="false"> GG EZ GO NEXT </string>
+    <string name="remeasure_air_humidity">Remeasure Air Humidity</string>
+    <string name="air_humidity_level">Air Humidity level:</string>
 
 </resources>

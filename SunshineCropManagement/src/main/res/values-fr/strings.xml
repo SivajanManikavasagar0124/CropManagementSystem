@@ -32,6 +32,8 @@
     <string name="NohaTV1">température de récolte </string>
     <string name="NohaS1">Celsius ou Fahrenheit </string>
     <string name="NohaTV2">34 </string>
+    <string name="remeasure_air_humidity">Remesurer l\'humidité de l\'air</string>
+    <string name="air_humidity_level">Niveau d\'humidité de l\'air :</string>
 
 
 </resources>
