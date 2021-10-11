@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.Settings.SunshineSettings"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.CropTemperature.CropTemperature"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_croptemperature" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.Water.SunshineWater"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.Sensors.SunshineSensors"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_soilmoisture" />
 </navigation>

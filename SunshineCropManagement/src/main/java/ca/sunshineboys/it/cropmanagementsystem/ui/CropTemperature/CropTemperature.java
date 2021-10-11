@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui.Settings;
+package ca.sunshineboys.it.cropmanagementsystem.ui.CropTemperature;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,15 +21,15 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
-public class SunshineSettings extends Fragment {
+public class CropTemperature extends Fragment {
 
-    private SettingsViewModel galleryViewModel;
+    private TemperatureViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
-                new ViewModelProvider(this).get(SettingsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+                new ViewModelProvider(this).get(TemperatureViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_croptemperature, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
