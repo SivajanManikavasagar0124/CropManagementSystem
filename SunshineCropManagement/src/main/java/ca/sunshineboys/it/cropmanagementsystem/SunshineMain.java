@@ -131,11 +131,12 @@ public class SunshineMain extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == BLUETOOTHPERMISSIONCODE){
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == BLUETOOTHPERMISSIONCODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, R.string.permissiongrant, Toast.LENGTH_SHORT).show();
 
-            }else{
+            } else {
                 Toast.makeText(this, R.string.permissiondeny, Toast.LENGTH_SHORT).show();
             }
         }
