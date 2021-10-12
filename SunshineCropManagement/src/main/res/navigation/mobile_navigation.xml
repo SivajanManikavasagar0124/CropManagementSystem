@@ -26,13 +26,13 @@
     <fragment
         android:id="@+id/nav_waterlevel"
         android:name="ca.sunshineboys.it.cropmanagementsystem.WaterLevelActivity"
-        android:label="Water Level"
+        android:label="@string/waterlevel"
         tools:layout="@layout/water_level_fragment" />
 
     <fragment
         android:id="@+id/nav_autonomous"
         android:name="ca.sunshineboys.it.cropmanagementsystem.TaskSchedulerActivity"
-        android:label="Task Scheduler"
+        android:label="@string/taskscheduler"
         tools:layout="@layout/task_scheduler_fragment" />
 
 

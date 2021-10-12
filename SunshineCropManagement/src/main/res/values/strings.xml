@@ -41,5 +41,7 @@
     <string name="about_us">About Us</string>
     <string name="support">Support</string>
     <string name="report_a_bug">Report a Bug</string>
+    <string name="waterlevel">Water Level</string>
+    <string name="taskscheduler">Task Scheduler</string>
 
 </resources>
