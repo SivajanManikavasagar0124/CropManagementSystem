@@ -12,6 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/*
+Sivajan Manikavasagar (Team Leader) N01240148
+Muhammad Qamar N01344609
+Noha Philips N01351336
+Tanvir Pahwa N01245843
+CENG 322 - RNC/D
+CENG 317 - 0NF
+ */
+
 public class SettingActivity extends Fragment {
 
     private SettingViewModel mViewModel;
