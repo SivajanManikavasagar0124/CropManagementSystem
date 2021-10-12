@@ -6,4 +6,14 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/bugreport_settings"
+        android:orderInCategory="100"
+        android:title="Report a Bug"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/aboutus_settings"
+        android:orderInCategory="100"
+        android:title="About Us"
+        app:showAsAction="never" />
 </menu>

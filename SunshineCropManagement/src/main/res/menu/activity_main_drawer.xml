@@ -18,7 +18,12 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
 
+        <item
+            android:id="@+id/nav_waterlevel"
+            android:title="@string/water_level"/>
 
+        <item android:id="@+id/nav_autonomous"
+            android:title="@string/task_scheduler" />
 
     </group>
 </menu>

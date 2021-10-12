@@ -3,22 +3,14 @@
     package="ca.sunshineboys.it.cropmanagementsystem">
 
     <application
+
+
         android:allowBackup="true"
         android:icon="@mipmap/sunshine_boys_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/sunshine_boys_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CropManagementSystem">
-        <activity
-            android:name=".SunshineMain"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.CropManagementSystem.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashTheme">
@@ -27,6 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SunshineMain"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CropManagementSystem.NoActionBar">
+        </activity>
+
 
     </application>
 

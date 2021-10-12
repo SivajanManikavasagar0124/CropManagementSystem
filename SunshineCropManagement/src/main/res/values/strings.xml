@@ -35,5 +35,7 @@
     <string name="NohaB1" translatable="false"> Reanalyze </string>
     <string name="remeasure_air_humidity">Remeasure Air Humidity</string>
     <string name="air_humidity_level">Air Humidity level:</string>
+    <string name="water_level">Water Level</string>
+    <string name="task_scheduler">Task Scheduler</string>
 
 </resources>
