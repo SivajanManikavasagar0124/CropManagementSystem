@@ -4,25 +4,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
+
+
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/windicon"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/tempicon"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/humidityicon"
             android:title="@string/menu_slideshow" />
 
         <item
             android:id="@+id/nav_waterlevel"
+            android:icon="@drawable/levelicon"
             android:title="@string/water_level"/>
 
         <item android:id="@+id/nav_autonomous"
+            android:icon="@drawable/wallclockicon"
             android:title="@string/task_scheduler" />
 
     </group>
