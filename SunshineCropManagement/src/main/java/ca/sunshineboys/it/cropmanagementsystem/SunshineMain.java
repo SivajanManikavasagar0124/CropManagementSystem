@@ -70,6 +70,8 @@ public class SunshineMain extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.action_settings:
                 Toast.makeText(this, R.string.settingsfragmentopen, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(SunshineMain.this, SettingActivity.class);
+                startActivity(i);
                 return true;
             case R.id.bugreport_settings:
                 Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();

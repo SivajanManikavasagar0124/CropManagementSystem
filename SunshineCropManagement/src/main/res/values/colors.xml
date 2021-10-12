@@ -147,4 +147,6 @@
     <color name="DarkBlue">#00008B</color>
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
+    <color name="LogoGradient1">#9B8DA8</color>
+    <color name="LogoGradient2">#C3BACA</color>
 </resources>
