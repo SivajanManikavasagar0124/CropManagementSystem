@@ -8,14 +8,14 @@
     <string name="app_name">Crop Management System</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Crop Manager</string>
+    <string name="nav_header_subtitle">Tap one of the menu options to get started!</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Air Humidity</string>
+    <string name="menu_gallery">Crop Temperature</string>
+    <string name="menu_slideshow">Soil Moisture</string>
     <string name="menu_num4">Number4</string>
 
     <string name="comment1">Replace with your own action</string>
@@ -32,7 +32,7 @@
     <string name="NohaTV1">Crop Temperature </string>
     <string name="NohaS1">Celsius or Fahrenheit </string>
     <string name="NohaTV2">34 </string>
-    <string name="NohaB1" translatable="false"> GG EZ GO NEXT </string>
+    <string name="NohaB1" translatable="false"> Reanalyze </string>
     <string name="remeasure_air_humidity">Remeasure Air Humidity</string>
     <string name="air_humidity_level">Air Humidity level:</string>
 

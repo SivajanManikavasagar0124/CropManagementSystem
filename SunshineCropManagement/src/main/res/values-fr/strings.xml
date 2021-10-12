@@ -8,8 +8,8 @@
     <string name="app_name">Crop Management System</string>
     <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Crop Manager</string>
+    <string name="nav_header_subtitle">commencer sur le menu</string>
     <string name="nav_header_desc">En-tête de navigation</string>
     <string name="action_settings">Réglage</string>
 
