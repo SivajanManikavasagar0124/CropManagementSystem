@@ -55,5 +55,7 @@
     <string name="settings">Settings</string>
     <string name="lock_orientation">Lock Orientation</string>
     <string name="language">Language</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="portrait_mode_only">Portrait Mode Only</string>
 
 </resources>
