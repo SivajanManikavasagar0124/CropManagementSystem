@@ -25,4 +25,11 @@
         android:layout_width="152dp"
         android:layout_height="125dp" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="565dp"
+        android:layout_height="324dp"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/waterlevel" />
+
 </FrameLayout>

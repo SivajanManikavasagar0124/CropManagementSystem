@@ -6,13 +6,13 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         android:icon="@drawable/gearicon"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/bugreport_settings"
         android:orderInCategory="100"
         android:icon="@drawable/bugicon"
         android:title="@string/report_a_bug"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom|withText" />
     <item
         android:id="@+id/sensor_settings"
         android:orderInCategory="100"
