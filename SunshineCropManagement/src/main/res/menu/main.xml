@@ -6,21 +6,26 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         android:icon="@drawable/gearicon"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/bugreport_settings"
         android:orderInCategory="100"
         android:icon="@drawable/bugicon"
-        android:title="Report a Bug"
+        android:title="@string/report_a_bug"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/sensor_settings"
+        android:orderInCategory="100"
+        android:title="@string/connect_sensors"
+        app:showAsAction="never" />
     <item
         android:id="@+id/aboutus_settings"
         android:orderInCategory="100"
-        android:title="About Us"
+        android:title="@string/about_us"
         app:showAsAction="never" />
     <item
         android:id="@+id/Support_settings"
         android:orderInCategory="100"
-        android:title="Support"
+        android:title="@string/support"
         app:showAsAction="never" />
 </menu>

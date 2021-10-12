@@ -37,5 +37,9 @@
     <string name="air_humidity_level">Air Humidity level:</string>
     <string name="water_level">Water Level</string>
     <string name="task_scheduler">Task Scheduler</string>
+    <string name="connect_sensors">Connect Sensors</string>
+    <string name="about_us">About Us</string>
+    <string name="support">Support</string>
+    <string name="report_a_bug">Report a Bug</string>
 
 </resources>

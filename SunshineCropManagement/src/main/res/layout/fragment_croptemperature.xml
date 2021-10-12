@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/PaleGreen"
+    android:background="@color/Ivory"
     tools:context=".ui.CropTemperature.CropTemperature">
 
     <TextView
@@ -75,8 +75,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="385dp"
         android:text="@string/NohaTV2"
-        android:background="@color/black"
-        android:textColor="@color/Yellow"
+        android:textColor="@color/Black"
         android:textSize="100sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"

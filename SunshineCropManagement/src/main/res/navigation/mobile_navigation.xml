@@ -19,7 +19,21 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.AirHumidity.AirHumidity"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture.SoilMoisture"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_soilmoisture" />
+
+    <fragment
+        android:id="@+id/nav_waterlevel"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.WaterLevelActivity"
+        android:label="Water Level"
+        tools:layout="@layout/water_level_fragment" />
+
+    <fragment
+        android:id="@+id/nav_autonomous"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.TaskSchedulerActivity"
+        android:label="Task Scheduler"
+        tools:layout="@layout/task_scheduler_fragment" />
+
+
 </navigation>
