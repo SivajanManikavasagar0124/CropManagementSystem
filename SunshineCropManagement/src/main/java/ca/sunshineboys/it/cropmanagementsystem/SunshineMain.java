@@ -7,16 +7,24 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
+import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -28,7 +36,7 @@ import androidx.appcompat.widget.Toolbar;
 public class SunshineMain extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    private int BLUETOOTHPERMISSIONCODE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +62,75 @@ public class SunshineMain extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.action_settings:
+                Toast.makeText(this, R.string.settingsfragmentopen, Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.bugreport_settings:
+                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.sensor_settings:
+                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                if (ContextCompat.checkSelfPermission(SunshineMain.this, Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED){
+                    //Do Nothing
+                } else{
+                    requestBluetoothPerms();
+                }
+                return true;
+            case R.id.aboutus_settings:
+                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.support_settings:
+                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+
+    }
+
+    private void requestBluetoothPerms() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.BLUETOOTH)){
+            new AlertDialog.Builder(this)
+                .setTitle(R.string.requiredperm)
+                    .setIcon(R.drawable.alert_icon)
+                    .setMessage(R.string.permissionrequiredforblue)
+                    .setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(SunshineMain.this, new String[]{Manifest.permission.BLUETOOTH}, BLUETOOTHPERMISSIONCODE);
+                        }
+                    })
+                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                          dialog.dismiss();
+                        }
+                    })
+                .create().show();
+        }else{
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH}, BLUETOOTHPERMISSIONCODE);
+        }
+
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == BLUETOOTHPERMISSIONCODE){
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(this, R.string.permissiongrant, Toast.LENGTH_SHORT).show();
+
+            }else{
+                Toast.makeText(this, R.string.permissiondeny, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     @Override

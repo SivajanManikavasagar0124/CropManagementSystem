@@ -43,5 +43,14 @@
     <string name="report_a_bug">Report a Bug</string>
     <string name="waterlevel">Water Level</string>
     <string name="taskscheduler">Task Scheduler</string>
+    <string name="currently_scheduled_for">Currently Scheduled for:</string>
+    <string name="placeholder">PLACEHOLDER</string>
+    <string name="settingsfragmentopen">Opening Settings Fragment</string>
+    <string name="permissiongrant">Permission Granted!</string>
+    <string name="permissiondeny">Permission Denied!</string>
+    <string name="requiredperm">Permission required</string>
+    <string name="permissionrequiredforblue">Permission for bluetooth is required to connect to sensors!</string>
+    <string name="okay">Okay</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
