@@ -52,5 +52,8 @@
     <string name="permissionrequiredforblue">Permission for bluetooth is required to connect to sensors!</string>
     <string name="okay">Okay</string>
     <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
+    <string name="lock_orientation">Lock Orientation</string>
+    <string name="language">Language</string>
 
 </resources>

@@ -35,5 +35,11 @@
         android:label="@string/taskscheduler"
         tools:layout="@layout/task_scheduler_fragment" />
 
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.SettingActivity"
+        android:label="@string/settings"
+        tools:layout="@layout/setting_fragment"/>
+
 
 </navigation>
