@@ -8,31 +8,88 @@ CENG 322 - RNC/D
 CENG 317 - 0NF
 -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/Ivory"
+    android:background="@color/LogoGradient2"
     tools:context=".ui.Home.HomeFragment">
 
 
     <TextView
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:text="@string/home_frag"
         android:id="@+id/text_homescreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:text="@string/home_frag"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.038" />
+
+    <FrameLayout
+        android:layout_width="373dp"
+        android:layout_height="199dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="442dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="214dp"
+            android:layout_height="137dp"
+            android:layout_gravity="top|start"
+            android:text="0 °C"
+            android:textSize="50sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="319dp"
+        android:layout_height="397dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/WaterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:text="@string/string_water_now"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginBottom="435dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

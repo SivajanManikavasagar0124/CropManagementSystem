@@ -60,5 +60,7 @@
     <string name="home">Home</string>
     <string name="detailed_sensor_data">Detailed Sensor Data</string>
     <string name="home_frag">Home Frag</string>
+    <string name="water_now">Water Now</string>
+    <string name="string_water_now" />
 
 </resources>
