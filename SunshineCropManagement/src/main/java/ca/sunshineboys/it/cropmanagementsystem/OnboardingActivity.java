@@ -83,7 +83,7 @@ public class OnboardingActivity extends AppCompatActivity {
                 nextbtn.setVisibility(View.VISIBLE);
                 letsGetStarted.setVisibility(View.INVISIBLE);
             } else {
-               // animation = AnimationUtils.loadAnimation(OnboardingActivity.this, R.anim.bottom_anim);
+              //  animation = AnimationUtils.loadAnimation(OnboardingActivity.this, R.anim.bottom_anim);
                 letsGetStarted.setAnimation(animation);
                 letsGetStarted.setVisibility(View.VISIBLE);
                 nextbtn.setVisibility(View.INVISIBLE);

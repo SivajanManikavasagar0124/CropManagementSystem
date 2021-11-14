@@ -26,16 +26,16 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
     int images[] = {
-           // R.drawable.onb1, R.drawable.onb2, R.drawable.onb3, R.drawable.onb4
+           R.drawable.alert_icon, R.drawable.alert_icon, R.drawable.alert_icon, R.drawable.alert_icon
     };
     int headings[] = {
-           // R.string.onboarding_title1, R.string.onboarding_title2, R.string.onboarding_title3, R.string.onboarding_title3
+            R.string.welcome1, R.string.connectsensor, R.string.placeholder, R.string.placeholder
     };
     int descriptions[] = {
-          //  R.string.onboarding_des1,
-          //  R.string.onboarding_des2,
-          //  R.string.onboarding_des3,
-          //  R.string.onboarding_des3
+          R.string.OnboardingPage2Desc,
+           R.string.OnboardingPage1Desc,
+          R.string.placeholder,
+          R.string.placeholder
     };
     @Override
     public int getCount() {

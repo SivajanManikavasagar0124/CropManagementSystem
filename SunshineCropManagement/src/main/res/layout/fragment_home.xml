@@ -77,7 +77,7 @@ CENG 317 - 0NF
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|top"
-            android:text="@string/string_water_now"/>
+            android:text="@string/water_now" />
     </FrameLayout>
 
     <View

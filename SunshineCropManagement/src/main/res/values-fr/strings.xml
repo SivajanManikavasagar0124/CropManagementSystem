@@ -60,7 +60,10 @@
     <string name="detailed_sensor_data">Detailed Sensor Data</string>
     <string name="home_frag">Home Frag</string>
     <string name="water_now">Water Now</string>
-    <string name="string_water_now" />
+    <string name="OnboardingPage2Desc">Please enable bluetooth permissions if you haven\'t already. If you see your product on the screen please select it and move on to the next page.</string>
+    <string name="OnboardingPage1Desc">\"Hi! Welcome to the Crop Management System App, You\'re almost ready to use your new product! In the next few steps we\'ll guide you through the process of setting up your sensor to be used with the app. \"</string>
+    <string name="welcome1">Welcome!</string>
+    <string name="connectsensor">Connect to your sensor</string>
 
 
 </resources>
