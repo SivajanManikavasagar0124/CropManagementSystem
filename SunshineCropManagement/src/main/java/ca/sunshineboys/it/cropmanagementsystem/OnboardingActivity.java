@@ -1,57 +1,89 @@
 package ca.sunshineboys.it.cropmanagementsystem;
 
-import android.graphics.Color;
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-
-
 public class OnboardingActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
-    private OnboardingAdapter onboardingAdapter;
+    ViewPager viewPager;
+    LinearLayout dotsLayout;
+    SliderAdapter sliderAdapter;
+    TextView[] dots;
+    Button letsGetStarted, nextbtn;
+    Animation animation; int currentPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
-        makeStatusbarTransparent();
+        viewPager = findViewById(R.id.slider);
+        dotsLayout = findViewById(R.id.dots);
+        letsGetStarted = findViewById(R.id.get_started_btn);
+        nextbtn = findViewById(R.id.next_btn);
 
-        viewPager = findViewById(R.id.onboarding_view_pager);
+        sliderAdapter = new SliderAdapter(this);
+        viewPager.setAdapter(sliderAdapter);
 
-        onboardingAdapter = new OnboardingAdapter(this);
-        viewPager.setAdapter(onboardingAdapter);
-        viewPager.setPageTransformer(false, new OnboardingPageTransformer());
-
-
+        addDots(0);
+        viewPager.addOnPageChangeListener(changeListener);
     }
 
+    public void getStarted(View view){ startActivity(new Intent(this, SunshineMain.class)); finish(); }
+    public void skip(View view){ startActivity(new Intent(this, SunshineMain.class)); finish(); }
+    public void next(View view){ viewPager.setCurrentItem(currentPosition + 1); }
 
-    // Listener for next button press
-    /*public void nextPage(View view) {
-        if (view.getId() == R.id.button2) {
-            if (viewPager.getCurrentItem() < onboardingAdapter.getCount() - 1) {
-                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
+
+    private void addDots(int position) {
+        dots = new TextView[4];
+        dotsLayout.removeAllViews();
+        for (int i = 0; i < dots.length; i++) {
+            dots[i] = new TextView(this);
+            dots[i].setText(Html.fromHtml("&#8226;"));
+            dots[i].setTextSize(30);
+            dots[i].setTextColor(getResources().getColor(R.color.DarkOrchid));
+            dotsLayout.addView(dots[i]);
+        }
+        if (dots.length > 0) {
+            dots[position].setTextColor(getResources().getColor(R.color.Red));
+        }
+    }
+    ViewPager.OnPageChangeListener changeListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            addDots(position);
+            currentPosition = position;
+            if (position == 0) {
+                nextbtn.setVisibility(View.VISIBLE);
+                letsGetStarted.setVisibility(View.INVISIBLE);
+            } else if (position == 1) {
+                nextbtn.setVisibility(View.VISIBLE);
+                letsGetStarted.setVisibility(View.INVISIBLE);
+            } else if (position == 2) {
+                nextbtn.setVisibility(View.VISIBLE);
+                letsGetStarted.setVisibility(View.INVISIBLE);
+            } else {
+               // animation = AnimationUtils.loadAnimation(OnboardingActivity.this, R.anim.bottom_anim);
+                letsGetStarted.setAnimation(animation);
+                letsGetStarted.setVisibility(View.VISIBLE);
+                nextbtn.setVisibility(View.INVISIBLE);
             }
         }
-    }*/
-
-    private void makeStatusbarTransparent() {
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        @Override
+        public void onPageScrollStateChanged(int state) {
         }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.TRANSPARENT);
-        }
-    }
+    };
 }

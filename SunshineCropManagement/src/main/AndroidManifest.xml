@@ -25,6 +25,11 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.CropManagementSystem.NoActionBar">
         </activity>
+        <activity
+            android:name=".OnboardingActivity"
+            android:label="Get Started!"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        </activity>
 
 
     </application>

@@ -1,8 +1,10 @@
 package ca.sunshineboys.it.cropmanagementsystem;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 /*
@@ -21,13 +23,19 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //This method will be executed once the timer is over
-                // Start your app main activity
+                SharedPreferences sharedPreferences =
+                       getSharedPreferences("onBoardingAct", MODE_PRIVATE);
+                // Check if we need to display our OnboardingSupportFragment
+                if (!sharedPreferences.getBoolean("COMPLETED_ONBOARDING", false)) {
+                    // The user hasn't seen the OnboardingSupportFragment yet, so show it
+                    startActivity(new Intent(SplashScreenActivity.this, OnboardingActivity.class));
+                    finish();
+                } else{
                 Intent i = new Intent(SplashScreenActivity.this, SunshineMain.class);
                 startActivity(i);
                 // close this activity
                 finish();
-            }
+            } }
         }, 3000);
     }
 }

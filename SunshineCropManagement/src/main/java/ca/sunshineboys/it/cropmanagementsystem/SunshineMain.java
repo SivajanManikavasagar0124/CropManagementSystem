@@ -47,13 +47,6 @@ public class SunshineMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SharedPreferences sharedPreferences =
-                PreferenceManager.getDefaultSharedPreferences(this);
-        // Check if we need to display our OnboardingSupportFragment
-        if (!sharedPreferences.getBoolean("COMPLETED_ONBOARDING", false)) {
-            // The user hasn't seen the OnboardingSupportFragment yet, so show it
-            startActivity(new Intent(this, OnboardingActivity.class));
-        }
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
      
