@@ -68,7 +68,7 @@ public class SunshineMain extends AppCompatActivity {
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
+              //  String value = snapshot.getValue(String.class);
             }
 
             @Override
