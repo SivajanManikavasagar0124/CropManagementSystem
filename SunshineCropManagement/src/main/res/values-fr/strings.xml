@@ -13,7 +13,7 @@
     <string name="nav_header_desc">En-tête de navigation</string>
     <string name="action_settings">Réglage</string>
 
-    <string name="menu_home">Maison</string>
+    <string name="menu_airhumid">Maison</string>
     <string name="menu_gallery">Galerie</string>
     <string name="menu_slideshow">Photos</string>
     <string name="menu_num4">Number4</string>
@@ -58,6 +58,7 @@
     <string name="portrait_mode_only">Portrait Mode Only</string>
     <string name="home">Home</string>
     <string name="detailed_sensor_data">Detailed Sensor Data</string>
+    <string name="home_frag">Home Frag</string>
 
 
 </resources>

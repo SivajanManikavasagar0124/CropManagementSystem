@@ -52,7 +52,7 @@ public class SunshineMain extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_airHumidity, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_waterlevel, R.id.nav_autonomous)
+                R.id.nav_Home, R.id.nav_airHumidity, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_waterlevel, R.id.nav_autonomous)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

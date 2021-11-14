@@ -10,6 +10,7 @@
             android:id="@+id/nav_Home"
             android:icon="@drawable/homeicon"
             android:title="@string/home" />
+
         <item android:id="@+id/nav_autonomous"
             android:icon="@drawable/wallclockicon"
             android:title="@string/task_scheduler" />
@@ -19,7 +20,7 @@
         <item
             android:id="@+id/nav_airHumidity"
             android:icon="@drawable/windicon"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_airhumid" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/tempicon"

@@ -3,12 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_airHumidity">
+    app:startDestination="@+id/nav_Home">
+
+    <fragment
+        android:id="@+id/nav_Home"
+        android:name="ca.sunshineboys.it.cropmanagementsystem.ui.Home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_airHumidity"
         android:name="ca.sunshineboys.it.cropmanagementsystem.ui.AirHumidity.AirHumidity"
-        android:label="@string/menu_home"
+        android:label="@string/menu_airhumid"
         tools:layout="@layout/fragment_airhumidity" />
 
     <fragment
