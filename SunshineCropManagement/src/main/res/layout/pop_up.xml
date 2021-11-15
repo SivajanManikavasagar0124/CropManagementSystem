@@ -7,7 +7,7 @@
     android:background="@color/PaleGreen">
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/userBugInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -30,7 +30,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="622dp"
-        android:text="What is the bug?"
+        android:text="@string/what_is_the_bug"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/issueTypes"
         android:layout_width="167dp"
         android:layout_height="94dp"
         android:layout_marginStart="122dp"
@@ -54,27 +54,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/hardwareIssue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hardware Issue" />
+            android:text="@string/hardware_issue" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/softwareIssue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Software Issue" />
+            android:text="@string/software_issue" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/reportButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="138dp"
         android:layout_marginTop="623dp"
         android:layout_marginEnd="137dp"
         android:layout_marginBottom="60dp"
-        android:text="Send Report"
+        android:text="@string/send_report"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
