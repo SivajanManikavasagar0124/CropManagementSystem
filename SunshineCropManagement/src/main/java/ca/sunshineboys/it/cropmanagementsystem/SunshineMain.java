@@ -7,6 +7,8 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
+
+//The design patterns used in the code are model view
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
