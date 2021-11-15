@@ -65,9 +65,8 @@
     <string name="OnboardingPage1Desc">\"Hi! Welcome to the Crop Management System App, You\'re almost ready to use your new product! In the next few steps we\'ll guide you through the process of setting up your sensor to be used with the app. \"</string>
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
-    <string name="prefTemp">Choose your preferred temperature scale</string>
-    <string name="fahrenheit">Fahrenheit</string>
-    <string name="celsius">Celsius</string>
-
+    <string name="prefTemp">Choisissez votre échelle de température préférée</string>
+    <string name="dry">sécher</string>
+    <string name="humid">HUMID</string>
 
 </resources>
