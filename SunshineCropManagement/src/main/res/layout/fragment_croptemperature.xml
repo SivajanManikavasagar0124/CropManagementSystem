@@ -12,7 +12,7 @@ CENG 317 - 0NF
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Ivory"
+    android:background="@color/LawnGreen"
     tools:context=".ui.CropTemperature.CropTemperature">
 
     <TextView
@@ -22,10 +22,10 @@ CENG 317 - 0NF
         android:layout_marginTop="49dp"
         android:layout_marginBottom="630dp"
         android:text="@string/NohaTV1"
-        android:textColor="@color/Sienna"
+        android:textColor="@color/White"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:background="@color/PowderBlue"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -54,6 +54,8 @@ CENG 317 - 0NF
         android:layout_marginTop="502dp"
         android:layout_marginBottom="181dp"
         android:text="@string/NohaB1"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
