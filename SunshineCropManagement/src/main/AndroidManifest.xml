@@ -41,7 +41,9 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         </activity>
 
-        <activity android:name=".PopUp" ></activity>
+        <activity android:name=".PopUp"
+            android:theme="@style/PopUpWindow"
+            ></activity>
 
     </application>
 
