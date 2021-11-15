@@ -18,6 +18,6 @@ public class PopUp extends Activity {
         int w = displayMetrics.widthPixels;
         int h = displayMetrics.heightPixels;
 
-        getWindow().setLayout((int)(w*.8),(int)(h*.8));
+        getWindow().setLayout((int)(w*.75),(int)(h*.98));
     }
 }
