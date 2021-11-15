@@ -12,7 +12,7 @@ CENG 317 - 0NF
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LawnGreen"
+    android:background="@color/LogoGradient2"
     tools:context=".ui.CropTemperature.CropTemperature">
 
     <TextView
