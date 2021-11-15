@@ -61,11 +61,21 @@ CENG 317 - 0NF
         android:layout_width="158dp"
         android:layout_height="43dp"
         android:layout_marginStart="124dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="96dp"
         android:text="@string/swtch1_soil"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_slideshow"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="113dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/am"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
