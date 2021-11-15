@@ -21,64 +21,63 @@ CENG 317 - 0NF
         android:layout_height="52dp"
         android:layout_marginTop="49dp"
         android:layout_marginBottom="630dp"
+        android:background="@color/black"
         android:text="@string/NohaTV1"
         android:textColor="@color/White"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:id="@+id/NohaImageView"
         android:layout_width="192dp"
         android:layout_height="199dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="203dp"
-        android:layout_marginBottom="382dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="407dp"
         android:src="@drawable/level1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
         android:id="@+id/NohaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="502dp"
-        android:layout_marginBottom="181dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="552dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="131dp"
+        android:backgroundTint="@color/white"
         android:text="@string/NohaB1"
         android:textColor="@color/black"
-        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/NohaTextView2"
-        android:layout_width="173dp"
-        android:layout_height="197dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="159dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="385dp"
+        android:layout_width="166dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="349dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="227dp"
         android:text="@string/NohaTV2"
         android:textColor="@color/Black"
         android:textSize="100sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
