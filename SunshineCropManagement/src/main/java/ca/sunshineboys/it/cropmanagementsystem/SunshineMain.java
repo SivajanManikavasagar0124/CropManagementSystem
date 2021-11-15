@@ -11,6 +11,7 @@ CENG 317 - 0NF
 //The design patterns used in the code are model view
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -91,7 +92,8 @@ public class SunshineMain extends AppCompatActivity {
                 SunshineMain.this.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, settingActivity).addToBackStack(null).commit();
                 return true;
             case R.id.bugreport_settings:
-                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SunshineMain.this, PopUp.class));
                 return true;
             case R.id.sensor_settings:
                 Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();

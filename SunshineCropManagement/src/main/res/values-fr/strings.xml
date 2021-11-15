@@ -68,5 +68,9 @@
     <string name="prefTemp">Choisissez votre échelle de température préférée</string>
     <string name="dry">sécher</string>
     <string name="humid">HUMID</string>
+    <string name="send_report">Envoyer un rapport</string>
+    <string name="hardware_issue">Problème matériel</string>
+    <string name="what_is_the_bug">Quel est le bogue?</string>
+    <string name="software_issue">Problème de logiciel</string>
 
 </resources>
