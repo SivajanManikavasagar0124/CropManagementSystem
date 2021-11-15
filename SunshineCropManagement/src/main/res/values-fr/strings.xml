@@ -62,7 +62,7 @@
     <string name="water_now">Water Now</string>
     <string name="string_water_now"></string>
     <string name="OnboardingPage2Desc"> Veuillez activer les autorisations Bluetooth si vous ne l\'avez pas déjà fait. Si vous voyez votre produit à l\'écran, veuillez le sélectionner et passer à la page suivante.</string>
-    <string name="OnboardingPage1Desc">\"Salut! Bienvenue dans l\'application Crop Management System, vous êtes presque prêt à utiliser votre nouveau produit ! Au cours des prochaines étapes, nous vous guiderons tout au long du processus de configuration de votre capteur à utiliser avec l'application.\"</string>
+    <string name="OnboardingPage1Desc">\"Salut! Bienvenue dans l\'application Crop Management System, vous êtes presque prêt à utiliser votre nouveau produit ! Au cours des prochaines étapes, nous vous guiderons tout au long du processus de configuration de votre capteur à utiliser avec l\'application.\"</string>
     <string name="welcome1">Bienvenu</string>
     <string name="connectsensor">Connectez-vous à votre capteur</string>
     <string name="prefTemp">Choisissez votre échelle de température préférée</string>
