@@ -1,5 +1,6 @@
 package ca.sunshineboys.it.cropmanagementsystem;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -79,6 +80,7 @@ public class OnboardingActivity extends AppCompatActivity {
             } else if (position == 1) {
                 nextbtn.setVisibility(View.VISIBLE);
                 letsGetStarted.setVisibility(View.INVISIBLE);
+                requestPermissions(new String[]{Manifest.permission.BLUETOOTH}, 1);
             } else if (position == 2) {
                 nextbtn.setVisibility(View.VISIBLE);
                 letsGetStarted.setVisibility(View.INVISIBLE);
