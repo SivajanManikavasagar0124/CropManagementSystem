@@ -34,7 +34,9 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
+/*
+KISS PRINCIPLE, keep it simple and stupid design principle
+ */
 public class SunshineMain extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
