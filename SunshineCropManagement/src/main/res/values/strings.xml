@@ -67,5 +67,8 @@
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
     <string name="dry">DRY</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">Celsius</string>
+    <string name="prefTemp">Choose your preferred temperature</string>
 
 </resources>

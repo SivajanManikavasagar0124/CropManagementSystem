@@ -28,6 +28,9 @@ public class SplashScreenActivity extends AppCompatActivity {
                 // Check if we need to display our OnboardingSupportFragment
                 if (!sharedPreferences.getBoolean("COMPLETED_ONBOARDING", false)) {
                     // The user hasn't seen the OnboardingSupportFragment yet, so show it
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("COMPLETED_ONBOARDING", true);
+                    editor.commit();
                     startActivity(new Intent(SplashScreenActivity.this, OnboardingActivity.class));
                     finish();
                 } else{

@@ -2,6 +2,7 @@ package ca.sunshineboys.it.cropmanagementsystem;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -44,6 +45,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
         addDots(0);
         viewPager.addOnPageChangeListener(changeListener);
+
     }
 
     public void getStarted(View view){ startActivity(new Intent(this, SunshineMain.class)); finish(); }
