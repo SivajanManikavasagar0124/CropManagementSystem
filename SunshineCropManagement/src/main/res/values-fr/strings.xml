@@ -65,6 +65,7 @@
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
     <string name="dry">DRY</string>
+    <string name="airhumidity">AIR HUMIDITY</string>
 
 
 </resources>
