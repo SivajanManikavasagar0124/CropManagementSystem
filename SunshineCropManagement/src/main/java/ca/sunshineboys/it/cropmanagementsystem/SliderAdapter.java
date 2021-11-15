@@ -18,6 +18,9 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
  */
+/*
+ KISS PRINCIPLE, keep it simple and stupid design principle 
+ */
 public class SliderAdapter extends PagerAdapter {
 
     Context context;
