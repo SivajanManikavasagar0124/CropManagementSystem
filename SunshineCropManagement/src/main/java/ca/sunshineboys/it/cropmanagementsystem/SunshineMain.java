@@ -10,12 +10,15 @@ CENG 317 - 0NF
 
 //The design patterns used in the code are model view
 import android.Manifest;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -43,6 +46,8 @@ public class SunshineMain extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private int BLUETOOTHPERMISSIONCODE = 1;
+    ImageView AboutusExit;
+    Dialog aboutUsPop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +64,10 @@ public class SunshineMain extends AppCompatActivity {
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        AboutusExit = findViewById(R.id.ExitAboutUsPopupButton);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        aboutUsPop = new Dialog(this);
         DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.addValueEventListener(new ValueEventListener() {
@@ -73,6 +80,9 @@ public class SunshineMain extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+
+    }
+    public void showAboutUsDiag(View v){
 
     }
 
@@ -106,7 +116,8 @@ public class SunshineMain extends AppCompatActivity {
                 }
                 return true;
             case R.id.aboutus_settings:
-                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                aboutUsPop.setContentView(R.layout.aboutuspopup);
+                aboutUsPop.show();
                 return true;
             case R.id.support_settings:
                 Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
@@ -117,6 +128,7 @@ public class SunshineMain extends AppCompatActivity {
         }
 
     }
+
 
     private void requestBluetoothPerms() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.BLUETOOTH)){
@@ -143,6 +155,8 @@ public class SunshineMain extends AppCompatActivity {
 
 
     }
+
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -184,5 +198,9 @@ public class SunshineMain extends AppCompatActivity {
         AlertDialog alertDialog = DIA1.create();
         alertDialog.show();
 
+    }
+
+    public void AboutUsPopupExit(View view) {
+        aboutUsPop.dismiss();
     }
 }
