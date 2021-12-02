@@ -27,7 +27,7 @@ CENG 317 - 0NF
         android:layout_marginTop="106dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="580dp"
-        android:background="@color/LogoGradient1"
+        android:background="@drawable/bg_gradient"
         android:focusable="true"
         android:text="Water Now"
         android:textAllCaps="false"
