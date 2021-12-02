@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     ImageView sensorPicture;
     TextView sensorText;
+    Button waterNow;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -40,8 +42,9 @@ public class HomeFragment extends Fragment {
         //Intialise OBJECTIDS
         sensorPicture = root.findViewById(R.id.connectionImage);
         sensorText = root.findViewById(R.id.connectionText);
+        waterNow = root.findViewById(R.id.waternowButton);
 
-
+        DatabaseReference waterNowRef = database.getReference("Watering");
         DatabaseReference sensorRef = database.getReference("sensorConnected");
         sensorRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -57,6 +60,13 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        waterNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });
