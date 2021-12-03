@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Ivory"
+    android:background="@color/HomePageColour"
     tools:context=".WaterLevelActivity">
 
-    <TextView
-        android:id="@+id/LvlPercent"
-        android:layout_width="297dp"
-        android:layout_height="197dp"
-        android:layout_gravity="start|center"
-        android:text="50%"
-        android:textColor="@color/Black"
-        android:textSize="100sp"
-        android:textStyle="italic" />
-
-    <ProgressBar
-        android:id="@+id/simpleProgressBar"
-        android:layout_gravity="end|center"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:max="100"
-        android:progress="50"
-        android:layout_width="152dp"
-        android:layout_height="125dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="565dp"
-        android:layout_height="324dp"
-        android:layout_gravity="center|bottom"
-        android:src="@drawable/waterlevel" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sensorinfo"
+        android:layout_marginTop="39dp"/>
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginStart="34dp"
+        android:src="@drawable/waterrx"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sensorbox"
+        android:layout_marginTop="210dp"/>
+
+
+
+</RelativeLayout>

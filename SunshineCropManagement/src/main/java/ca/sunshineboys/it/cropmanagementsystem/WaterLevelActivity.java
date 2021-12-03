@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.gelitenight.waveview.library.WaveView;
+
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
 Muhammad Qamar N01344609
@@ -22,7 +25,7 @@ CENG 317 - 0NF
 public class WaterLevelActivity extends Fragment {
 
     private WaterLevelViewModel mViewModel;
-
+    WaveView waveView;
     public static WaterLevelActivity newInstance() {
         return new WaterLevelActivity();
     }
@@ -30,7 +33,8 @@ public class WaterLevelActivity extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.water_level_fragment, container, false);
+      View root = inflater.inflate(R.layout.water_level_fragment, container, false);
+            return root;
     }
 
     @Override
