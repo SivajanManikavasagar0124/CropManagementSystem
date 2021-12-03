@@ -20,12 +20,38 @@
         android:layout_marginStart="34dp"
         android:src="@drawable/waterrx"/>
 
+
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_sensorbox"
         android:layout_marginTop="210dp"/>
 
+    <TextView
+        android:id="@+id/waterleveltitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="220dp"
+        android:fontFamily="@font/poppinsdefault"
+        android:gravity="center"
+        android:text="Water Level"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/waterlevelPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="310dp"
+        android:fontFamily="@font/poppinsdefault"
+        android:gravity="center"
+        android:text="12%"
+        android:textColor="@color/purple_500"
+        android:textSize="150dp" />
 
 
 </RelativeLayout>
