@@ -30,10 +30,11 @@ CENG 317 - 0NF
         android:layout_alignParentTop="true"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="45dp"
+        android:fontFamily="@font/poppinsdefault"
         android:gravity="center_horizontal|top"
         android:text="Welcome to Crop Management"
         android:textColor="@color/Black"
-        android:textSize="24sp" />
+        android:textSize="23dp" />
 
     <RelativeLayout
         android:id="@+id/homepagesecondary"
@@ -55,6 +56,8 @@ CENG 317 - 0NF
             android:focusable="true"
             android:text="Water Plants"
             android:textAllCaps="false"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppinsdefault"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -74,6 +77,9 @@ CENG 317 - 0NF
             android:layout_width="100dp"
             android:layout_height="24dp"
             android:layout_marginLeft="152dp"
+            android:fontFamily="@font/poppinsdefault"
+            android:textSize="13dp"
+            android:textColor="@color/black"
             android:layout_marginTop="293dp"
             android:gravity="center_horizontal"
             android:text="Not Connected" />
@@ -100,6 +106,9 @@ CENG 317 - 0NF
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="410dp"
+            android:fontFamily="@font/poppinsdefault"
+            android:textSize="20dp"
+            android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:text="Quick Menu"
             />
