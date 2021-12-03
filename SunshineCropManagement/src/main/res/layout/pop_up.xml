@@ -1,69 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LavenderBlush">
+    android:background="@color/White">
 
 
     <EditText
         android:id="@+id/userBugInput"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="343dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="343dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="98dp"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textbug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="603dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Details about the Bug"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="638dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="603dp"
+        android:fontFamily="@font/poppinsbold"
         android:text="@string/what_is_the_bug"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/issueTypes"
-        android:layout_width="150dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="143dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="480dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="296dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="433dp">
 
         <RadioButton
             android:id="@+id/hardwareIssue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsdefault"
             android:text="@string/hardware_issue" />
 
         <RadioButton
             android:id="@+id/softwareIssue"
             android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsdefault"
             android:text="@string/software_issue" />
     </RadioGroup>
 
@@ -71,20 +76,11 @@
         android:id="@+id/reportButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="618dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="302dp"
         android:layout_marginEnd="138dp"
-        android:layout_marginBottom="65dp"
-        android:text="@string/send_report"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/poppinsdefault"
+        android:text="@string/send_report" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" />
+</RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@ package ca.sunshineboys.it.cropmanagementsystem;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Window;
+
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
 Muhammad Qamar N01344609
@@ -16,7 +18,7 @@ public class PopUp extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pop_up);
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -25,6 +27,6 @@ public class PopUp extends Activity {
         int w = displayMetrics.widthPixels;
         int h = displayMetrics.heightPixels;
 
-        getWindow().setLayout((int)(w*.75),(int)(h*.98));
+        getWindow().setLayout((int)(w*.80),(int)(h*.45));
     }
 }
