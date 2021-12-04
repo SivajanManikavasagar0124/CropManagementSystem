@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.gelitenight.waveview.library.WaveView;
+//import com.gelitenight.waveview.library.WaveView;
 
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -25,7 +25,7 @@ CENG 317 - 0NF
 public class WaterLevelActivity extends Fragment {
 
     private WaterLevelViewModel mViewModel;
-    WaveView waveView;
+  //  WaveView waveView;
     public static WaterLevelActivity newInstance() {
         return new WaterLevelActivity();
     }

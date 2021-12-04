@@ -1,5 +1,6 @@
 package ca.sunshineboys.it.cropmanagementsystem.ui.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -29,7 +31,14 @@ import java.time.Duration;
 import java.util.HashMap;
 
 import ca.sunshineboys.it.cropmanagementsystem.R;
+import ca.sunshineboys.it.cropmanagementsystem.SettingActivity;
+import ca.sunshineboys.it.cropmanagementsystem.SunshineMain;
+import ca.sunshineboys.it.cropmanagementsystem.TaskSchedulerActivity;
+import ca.sunshineboys.it.cropmanagementsystem.WaterLevelActivity;
+import ca.sunshineboys.it.cropmanagementsystem.ui.AirHumidity.AirHumidity;
+import ca.sunshineboys.it.cropmanagementsystem.ui.CropTemperature.CropTemperature;
 import ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture.MoistureViewModel;
+import ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture.SoilMoisture;
 
 public class HomeFragment extends Fragment {
 
@@ -37,6 +46,12 @@ public class HomeFragment extends Fragment {
     ImageView sensorPicture;
     TextView sensorText;
     Button waterNow;
+
+    ImageView soilMoisture;
+    ImageView taskSched;
+    ImageView cropTemp;
+    ImageView airHumidity;
+    ImageView waterLevel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,6 +64,13 @@ public class HomeFragment extends Fragment {
         sensorText = root.findViewById(R.id.connectionText);
         waterNow = root.findViewById(R.id.waternowButton);
 
+
+        //Quick Menu Items
+        soilMoisture = root.findViewById(R.id.soilMoistImage);
+        taskSched = root.findViewById(R.id.taskSchedImage);
+        cropTemp = root.findViewById(R.id.cropTempImage);
+        airHumidity = root.findViewById(R.id.airHumidityImage);
+        waterLevel = root.findViewById(R.id.waterLevelImage);
 
         DatabaseReference waterNowRef = database.getReference("Watering");
         DatabaseReference sensorRef = database.getReference("sensorConnected");
@@ -116,6 +138,55 @@ public class HomeFragment extends Fragment {
 
                                         }
                                     });
+
+        //Quick Menu Listeners
+        soilMoisture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new SoilMoisture());
+                fragmentTransaction.commit();
+            }
+        });
+
+        taskSched.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new TaskSchedulerActivity());
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        cropTemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new CropTemperature());
+                fragmentTransaction.commit();
+            }
+        });
+
+        airHumidity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new AirHumidity());
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        waterLevel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new WaterLevelActivity());
+                fragmentTransaction.commit();
+            }
+        });
+
 
         /*homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
