@@ -35,7 +35,7 @@
     <string name="NohaS1">Celsius or Fahrenheit </string>
     <string name="NohaTV2">34 </string>
     <string name="NohaB1" translatable="false"> Reanalyze </string>
-    <string name="remeasure_air_humidity">Recalibrate Sensor</string>
+    <string name="remeasure_air_humidity">Remeasure Air Humidity</string>
     <string name="air_humidity_level">HUMID</string>
     <string name="water_level">Water Level</string>
     <string name="task_scheduler">Task Scheduler</string>
@@ -76,11 +76,11 @@
     <string name="OnboardingPage2Desc">\"Hi! Welcome to the Crop Management System App, You\'re almost ready to use your new product! In the next few steps we\'ll guide you through the process of setting up your sensor to be used with the app. \"</string>
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
-    <string name="dry">DRY</string>
+    <string name="dry">Dry</string>
     <string name="fahrenheit" translatable="false">Imperial</string>
     <string name="celsius" translatable="false">Metric</string>
     <string name="prefTemp">Preferred Units</string>
-    <string name="humid">HUMID</string>
+    <string name="humid">Humid</string>
     <string name="_80placeholder" translatable="false">80%</string>
     <string name="send_report">Send Report</string>
     <string name="software_issue">Software Issue</string>
