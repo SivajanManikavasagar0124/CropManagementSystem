@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem.ui;
+/*package ca.sunshineboys.it.cropmanagementsystem.ui;
 
 import static java.util.regex.Pattern.compile;
 
@@ -133,7 +133,7 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
             registercPass.requestFocus();
             return;
         }
-
+*/
        /* crop.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -162,4 +162,4 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
                     }
                 });
     }*/
-}
+//}

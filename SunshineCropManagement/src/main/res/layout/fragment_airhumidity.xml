@@ -7,121 +7,89 @@ Tanvir Pahwa N01245843
 CENG 322 - RNC/D
 CENG 317 - 0NF
 -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LogoGradient2"
+    android:background="@color/HomePageColour"
     tools:context=".ui.AirHumidity.AirHumidity">
 
-    <TextView
-        android:id="@+id/text_airhumidityHumid"
-        android:layout_width="182dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="646dp"
-        android:text="@string/air_humidity_level"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_sensorinfo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginStart="34dp"
+        android:src="@drawable/windlogo" />
 
     <Button
         android:id="@+id/airHumidityButton"
-        android:layout_width="138dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="337dp"
-        android:text="@string/remeasure_air_humidity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="570dp"
+        android:text="@string/remeasure_air_humidity" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="417dp"
-        android:layout_height="244dp"
-        android:layout_marginTop="498dp"
-        android:src="@drawable/humidity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sensorbox"
+        android:layout_marginTop="210dp"/>
+
+    <ImageView
+        android:layout_width="305dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="255dp"
+        android:src="@drawable/ic_vectorcircle" />
 
     <ProgressBar
         android:id="@+id/progressBarAirHumid"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="150dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="245dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="523dp"
-        android:progress="80"
-        android:rotation="270"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="315dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="510dp"
+        android:progress="80" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="249dp"
-        android:layout_marginTop="103dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="608dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="530dp"
         android:text="@string/humid"
-        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="269dp"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="455dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="530dp"
         android:text="@string/dry"
-        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/humidityLevelText"
-        android:layout_width="97dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginBottom="511dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="340dp"
+        android:fontFamily="@font/poppinsdefault"
+        android:gravity="center"
         android:text="@string/_80placeholder"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/DefaultTitleText"
+        android:textSize="90dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

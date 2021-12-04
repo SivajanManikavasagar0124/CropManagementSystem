@@ -31,7 +31,7 @@ public class AirHumidity extends Fragment {
         homeViewModel =
                 new ViewModelProvider(this).get(HumidityViewModel.class);
         View root = inflater.inflate(R.layout.fragment_airhumidity, container, false);
-       final TextView textView = root.findViewById(R.id.text_airhumidityHumid);
+       //final TextView textView = root.findViewById(R.id.text_airhumidityHumid);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
