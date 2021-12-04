@@ -1,5 +1,6 @@
 package ca.sunshineboys.it.cropmanagementsystem.ui.Home;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -95,6 +97,7 @@ public class HomeFragment extends Fragment {
         Snackbar nowWatering = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants are being watered!", Snackbar.LENGTH_LONG);
         Snackbar WaterERROR = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants are currently being watered! Avoid pressing the button multiple times!", Snackbar.LENGTH_LONG);
         Snackbar completeWater = Snackbar.make(getActivity().findViewById(android.R.id.content), "Finished watering the plants!",Snackbar.LENGTH_SHORT);
+        Snackbar WATERERROR2 = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants were not watered!",Snackbar.LENGTH_SHORT);
         waterNow.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -104,27 +107,53 @@ public class HomeFragment extends Fragment {
                                                     if (snapshot.exists()){
                                                         WaterERROR.show();
                                                     }else{
-                                                                waterNowRef.setValue("1", new DatabaseReference.CompletionListener() {
-                                                                    @Override
-                                                                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                                                        nowWatering.show();
-                                                                    }
-                                                                });
+
+                                                        sensorRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                            @Override
+                                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                if (snapshot.exists()){
+                                                                    waterNowRef.setValue("1", new DatabaseReference.CompletionListener() {
+                                                                        @Override
+                                                                        public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                                                                            nowWatering.show();
+                                                                        }
+                                                                    });
+                                                                    new Handler().postDelayed(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                            waterNowRef.setValue(null, new DatabaseReference.CompletionListener() {
+                                                                                @Override
+                                                                                public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                                                                                    completeWater.show();
+                                                                                }
+                                                                            });
+                                                                        }
+                                                                    },5000 );
+                                                                }else{
+                                                                    AlertDialog.Builder DIAWATERRROR = new AlertDialog.Builder(getActivity());
+                                                                    DIAWATERRROR.setTitle("Sensor not Connected!");
+                                                                    DIAWATERRROR.setIcon(R.drawable.alert_icon);
+                                                                    DIAWATERRROR.setMessage("You can not water your plants because the sensor is not connected!");
+                                                                    DIAWATERRROR.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                                                                        @Override
+                                                                        public void onClick(DialogInterface dialog, int which) {
+                                                                            WATERERROR2.show();
+                                                                        }
+                                                                    });
+                                                                    AlertDialog alertDialog = DIAWATERRROR.create();
+                                                                    alertDialog.show();
+                                                                }
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                                            }
+                                                        });
 
 
 
                                                     }
-                                                    new Handler().postDelayed(new Runnable() {
-                                                        @Override
-                                                        public void run() {
-                                                            waterNowRef.setValue(null, new DatabaseReference.CompletionListener() {
-                                                                @Override
-                                                                public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                                                    completeWater.show();
-                                                                }
-                                                            });
-                                                        }
-                                                    },5000 );
 
 
                                                 }
