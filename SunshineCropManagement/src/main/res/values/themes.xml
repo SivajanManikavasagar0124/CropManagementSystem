@@ -21,7 +21,7 @@
 
     <style name="Theme.CropManagementSystem.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <item name="android:fontFamily">@font/poppinsdefault</item>
+        <item name="android:fontFamily">@font/poppinsbold</item>
     </style>
 
 

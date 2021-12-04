@@ -11,16 +11,37 @@ CENG 317 - 0NF
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Ivory"
+    android:background="@color/HomePageColour"
     tools:context=".TaskSchedulerActivity">
 
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_sensorbox"
+    android:layout_marginTop="205dp"
+    android:layout_marginStart="20dp"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sensorinfo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"/>
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginStart="35dp"
+
+        android:src="@drawable/taskschex"/>
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="400dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="210dp"
+        />
+<!--
     <TextView
         android:id="@+id/Currenttask"
         android:layout_width="297dp"
@@ -30,6 +51,6 @@ CENG 317 - 0NF
         android:textColor="@color/Black"
         android:textSize="25sp"
         android:textStyle="italic" />
-
+-->
 
 </FrameLayout>
