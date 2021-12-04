@@ -86,13 +86,21 @@ CENG 317 - 0NF
         android:textSize="15dp" />
 
     <ToggleButton
-        android:id="@+id/soiltoggleButton"
+        android:id="@+id/soiltogglebutton"
         android:layout_width="52dp"
         android:layout_height="37dp"
         android:layout_marginStart="280dp"
         android:layout_marginTop="500dp"
         android:text="ToggleButton"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/soilbutton"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="560dp"
+        android:text="Measure Moisture" />
 
 
 </RelativeLayout>
