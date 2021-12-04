@@ -31,11 +31,12 @@ public class SoilMoisture extends Fragment {
         slideshowViewModel =
                 new ViewModelProvider(this).get(MoistureViewModel.class);
         View root = inflater.inflate(R.layout.fragment_soilmoisture, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
+        //final TextView textView = root.findViewById(R.id.soildescription);
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onChanged(@Nullable String s)
+            {
+               // textView.setText(s);
             }
         });
         return root;

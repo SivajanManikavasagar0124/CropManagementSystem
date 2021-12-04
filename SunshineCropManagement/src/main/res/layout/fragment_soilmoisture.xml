@@ -45,7 +45,7 @@ CENG 317 - 0NF
         android:layout_marginTop="220dp"
         android:fontFamily="@font/poppinsdefault"
         android:gravity="center"
-        android:text="Soil Moisture"
+        android:text="@string/text1_soil"
         android:textColor="@color/black"
         android:textSize="39dp" />
 
@@ -53,12 +53,12 @@ CENG 317 - 0NF
     <TextView
         android:id="@+id/soilunits"
         android:layout_width="wrap_content"
-        android:layout_height="185dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="75dp"
         android:layout_marginTop="300dp"
         android:fontFamily="@font/poppinsdefault"
         android:gravity="center"
-        android:text="43x"
+        android:text="@string/soilunit"
         android:textColor="@color/purple_500"
         android:textSize="150dp" />
 
@@ -68,31 +68,11 @@ CENG 317 - 0NF
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
         android:layout_marginTop="90dp"
-        android:text="Measure moisture with a click of a button!"
+        android:text="@string/soildescription"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/soiltoggletext"
-        android:layout_width="193dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="500dp"
-        android:fontFamily="@font/poppinsdefault"
-        android:gravity="center"
-        android:text="Connect to sensor: "
-        android:textColor="@color/purple_500"
-        android:textSize="15dp" />
-
-    <ToggleButton
-        android:id="@+id/soiltogglebutton"
-        android:layout_width="52dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="500dp"
-        android:text="ToggleButton"
-        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/soilbutton"
@@ -100,7 +80,7 @@ CENG 317 - 0NF
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="560dp"
-        android:text="Measure Moisture" />
+        android:text="@string/btn1_soil" />
 
 
 </RelativeLayout>

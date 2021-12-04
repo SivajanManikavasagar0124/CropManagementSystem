@@ -28,6 +28,8 @@
     <string name="text1_soil">Fragment d\'humidité du sol</string>
     <string name="btn1_soil">Mesurer l\'humidité</string>
     <string name="swtch1_soil">Connecté au capteur: </string>
+    <string name="soildescription">Mesurez l’humidité en un clic!</string>
+    <string name="soilunit">43x</string>
 
     <string name="NohaTV1">température de récolte </string>
     <string name="NohaS1">Celsius ou Fahrenheit </string>
