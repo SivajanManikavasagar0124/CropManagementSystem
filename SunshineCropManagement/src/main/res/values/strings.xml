@@ -91,5 +91,14 @@
     <string name="it_is_currently_humid">It is currently HUMID</string>
     <string name="measure_air_humidity_in_real_time">Measure Air Humidity in real time!</string>
     <string name="measure_the_current_temperature">Measure the current temperature!</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="nowWatering">Plants are being watered!</string>
+    <string name="WaterError">Plants are currently being watered! Avoid pressing the button multiple times!</string>
+    <string name="completeWater">Finished watering the plants!</string>
+    <string name="watererror2">Plants were not watered!</string>
+    <string name="sensorNotConnected">Sensor not Connected!</string>
+    <string name="sensorNotConnected2">You can not water your plants because the sensor is not connected!</string>
+    <string name="ok">OK</string>
 
 </resources>

@@ -82,10 +82,10 @@ public class HomeFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
             if (snapshot.exists()){
                 sensorPicture.setImageResource(R.drawable.greenconnection);
-                sensorText.setText("Connected");
+                sensorText.setText(R.string.connected);
             }else{ //If snapshot == NULL show disconnected
                 sensorPicture.setImageResource(R.drawable.redconnection);
-                sensorText.setText("Disconnected");
+                sensorText.setText(R.string.disconnected);
             }
             }
 
@@ -94,10 +94,10 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        Snackbar nowWatering = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants are being watered!", Snackbar.LENGTH_LONG);
-        Snackbar WaterERROR = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants are currently being watered! Avoid pressing the button multiple times!", Snackbar.LENGTH_LONG);
-        Snackbar completeWater = Snackbar.make(getActivity().findViewById(android.R.id.content), "Finished watering the plants!",Snackbar.LENGTH_SHORT);
-        Snackbar WATERERROR2 = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants were not watered!",Snackbar.LENGTH_SHORT);
+        Snackbar nowWatering = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.nowWatering, Snackbar.LENGTH_LONG);
+        Snackbar WaterERROR = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.WaterError, Snackbar.LENGTH_LONG);
+        Snackbar completeWater = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.completeWater,Snackbar.LENGTH_SHORT);
+        Snackbar WATERERROR2 = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.watererror2,Snackbar.LENGTH_SHORT);
         waterNow.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -131,10 +131,10 @@ public class HomeFragment extends Fragment {
                                                                     },5000 );
                                                                 }else{
                                                                     AlertDialog.Builder DIAWATERRROR = new AlertDialog.Builder(getActivity());
-                                                                    DIAWATERRROR.setTitle("Sensor not Connected!");
+                                                                    DIAWATERRROR.setTitle(R.string.sensorNotConnected);
                                                                     DIAWATERRROR.setIcon(R.drawable.alert_icon);
-                                                                    DIAWATERRROR.setMessage("You can not water your plants because the sensor is not connected!");
-                                                                    DIAWATERRROR.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                                                                    DIAWATERRROR.setMessage(R.string.sensorNotConnected2);
+                                                                    DIAWATERRROR.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                                                                         @Override
                                                                         public void onClick(DialogInterface dialog, int which) {
                                                                             WATERERROR2.show();
