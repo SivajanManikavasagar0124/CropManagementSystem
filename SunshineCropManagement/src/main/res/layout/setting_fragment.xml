@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/realertivelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/HomePageColour"
@@ -15,14 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="236dp"
-        android:layout_marginEnd="293dp"
-        android:layout_marginBottom="476dp"
         android:text="@string/lock_orientation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppinsdefault"
+        android:textColor="@color/DefaultTitleText"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -30,12 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:textColor="@color/DefaultTitleText"
         android:layout_marginTop="305dp"
-        android:layout_marginEnd="270dp"
+        android:fontFamily="@font/poppinsdefault"
         android:text="@string/enable_notifications"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <Switch
         android:id="@+id/portlock"
@@ -46,10 +40,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="468dp"
         android:text="@string/portrait_mode_only"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <Switch
         android:id="@+id/notficswitch"
@@ -59,19 +50,24 @@
         android:layout_marginTop="301dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="403dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vectorrectangle"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="375dp"/>
+
 
     <RadioGroup
-        android:layout_width="164dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="420dp"
+        android:layout_width="200dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="415dp"
         android:layout_marginEnd="124dp"
+        android:textAlignment="center"
         android:layout_marginBottom="213dp"
-        android:background="@color/CadetBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,12 +76,15 @@
         <RadioButton
             android:id="@+id/celsiusButton"
             android:layout_width="match_parent"
+            android:fontFamily="@font/poppinsdefault"
             android:layout_height="wrap_content"
             android:text="@string/celsius" />
 
         <RadioButton
             android:id="@+id/fahrenheitButton"
             android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppinsdefault"
             android:layout_height="wrap_content"
             android:text="@string/fahrenheit" />
     </RadioGroup>
@@ -93,18 +92,12 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="165dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="379dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="311dp"
-        android:background="@color/CadetBlue"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="390dp"
+        android:fontFamily="@font/poppinsdefault"
         android:text="@string/prefTemp"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/DefaultTitleText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

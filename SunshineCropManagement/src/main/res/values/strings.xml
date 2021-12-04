@@ -67,9 +67,9 @@
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
     <string name="dry">DRY</string>
-    <string name="fahrenheit" translatable="false">Fahrenheit</string>
-    <string name="celsius" translatable="false">Celsius</string>
-    <string name="prefTemp">Choose your preferred temperature</string>
+    <string name="fahrenheit" translatable="false">Imperial</string>
+    <string name="celsius" translatable="false">Metric</string>
+    <string name="prefTemp">Preferred Units</string>
     <string name="humid">HUMID</string>
     <string name="_80placeholder" translatable="false">80%</string>
     <string name="send_report">Send Report</string>
