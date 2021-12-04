@@ -31,9 +31,9 @@
     <string name="soildescription">Measure moisture with a click of a button!</string>
     <string name="soilunit">43x</string>
 
-    <string name="NohaTV1">Crop Temperature </string>
+    <string name="CropTemp">Crop Temperature </string>
     <string name="NohaS1">Celsius or Fahrenheit </string>
-    <string name="NohaTV2">34 </string>
+    <string name="TempOfCrop">34C </string>
     <string name="NohaB1" translatable="false"> Reanalyze </string>
     <string name="remeasure_air_humidity">Remeasure Air Humidity</string>
     <string name="air_humidity_level">HUMID</string>
@@ -90,5 +90,6 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="it_is_currently_humid">It is currently HUMID</string>
     <string name="measure_air_humidity_in_real_time">Measure Air Humidity in real time!</string>
+    <string name="measure_the_current_temperature">Measure the current temperature!</string>
 
 </resources>
