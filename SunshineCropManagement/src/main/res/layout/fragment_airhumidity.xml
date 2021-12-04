@@ -19,7 +19,6 @@ CENG 317 - 0NF
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/ic_sensorinfo" />
 
@@ -43,7 +42,7 @@ CENG 317 - 0NF
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_sensorbox"
-        android:layout_marginTop="210dp"/>
+        android:layout_marginTop="210dp" />
 
     <ImageView
         android:layout_width="275dp"
@@ -100,13 +99,13 @@ CENG 317 - 0NF
         android:id="@+id/airHumidityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="225dp"
         android:fontFamily="@font/poppinsdefault"
-        android:text="It is currently HUMID"
+        android:text="@string/it_is_currently_humid"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -114,7 +113,7 @@ CENG 317 - 0NF
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="95dp"
-        android:text="Measure Air Humidity in real time!"
+        android:text="@string/measure_air_humidity_in_real_time"
         android:textStyle="bold"
         android:textColor="@color/black" />
 

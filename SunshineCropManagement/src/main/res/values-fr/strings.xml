@@ -82,5 +82,7 @@
     <string name="hardware_issue">Problème matériel</string>
     <string name="what_is_the_bug">Quel est le bogue?</string>
     <string name="software_issue">Problème de logiciel</string>
+    <string name="it_is_currently_humid">Il fait actuellement HUMIDE</string>
+    <string name="measure_air_humidity_in_real_time">Mesurez l\'humidité de l\'air en temps réel !</string>
 
 </resources>
