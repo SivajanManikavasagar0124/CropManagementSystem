@@ -2,31 +2,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        android:iconTint="@color/Black"
         android:icon="@drawable/gearicon"
         app:showAsAction="always|withText" />
     <item
         android:id="@+id/bugreport_settings"
         android:orderInCategory="100"
         android:icon="@drawable/bugicon"
+        android:iconTint="@color/Black"
         android:title="@string/report_a_bug"
         app:showAsAction="ifRoom|withText" />
     <item
         android:id="@+id/sensor_settings"
         android:orderInCategory="100"
+        android:iconTint="@color/Black"
         android:title="@string/connect_sensors"
         app:showAsAction="never" />
     <item
         android:id="@+id/aboutus_settings"
+        android:iconTint="@color/Black"
         android:orderInCategory="100"
         android:title="@string/about_us"
         app:showAsAction="never" />
     <item
         android:id="@+id/support_settings"
+        android:iconTint="@color/Black"
         android:orderInCategory="100"
         android:title="@string/support"
         app:showAsAction="never" />

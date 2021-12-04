@@ -28,6 +28,8 @@ CENG 317 - 0NF
         android:layout_gravity="start"
         android:background="@color/LogoGradient2"
         android:fitsSystemWindows="true"
+        app:itemIconTint="@color/Black"
+        app:itemTextColor="@color/Black"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -14,6 +14,8 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
@@ -54,8 +56,9 @@ public class SunshineMain extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-     toolbar.setTitleTextColor(getResources().getColor(R.color.Black));
 
+     toolbar.setTitleTextColor(getResources().getColor(R.color.Black));
+    toolbar.getOverflowIcon().setTint(ContextCompat.getColor(this, R.color.Black));
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
