@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/HomePageColour"
     tools:context=".ui.ReviewFragment">
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_sensorinfo" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -22,78 +15,127 @@
         android:layout_marginTop="49dp"
         android:src="@drawable/homepagelogo" />
 
-
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="210dp"
-        android:src="@drawable/ic_sensorbox" />
+        android:layout_marginTop="7dp"
+        android:src="@drawable/ic_sensorinfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExitReviewPopupButton" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="104dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="164dp"
+        android:src="@drawable/homepagelogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="330dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="41dp"
+        android:src="@drawable/ic_sensorbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
 
     <TextView
         android:id="@+id/reviewtitle"
         android:layout_width="346dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="40dp"
         android:fontFamily="@font/poppinsdefault"
         android:gravity="center"
         android:text="@string/reviewtext"
         android:textColor="@color/black"
-        android:textSize="35dp" />
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
         android:id="@+id/reviewEditTextTextName"
-        android:layout_width="281dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="290dp"
+        android:layout_width="243dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="-285dp"
+        android:layout_marginBottom="19dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/reviewName"
+        app:layout_constraintBottom_toTopOf="@+id/reviewEditTextTextEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/reviewEditTextTextComment"
-        android:layout_width="281dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="480dp"
+        android:layout_width="244dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="-285dp"
+        android:layout_marginBottom="148dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/reviewComment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/reviewEditTextTextEmailAddress"
-        android:layout_width="282dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="350dp"
+        android:layout_width="244dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="-285dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="@string/reviewEmail"
+        app:layout_constraintBottom_toTopOf="@+id/reviewEditTextPhone"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/reviewEditTextPhone"
-        android:layout_width="279dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="420dp"
+        android:layout_width="246dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="-285dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="phone"
         android:text="@string/reviewPhone"
+        app:layout_constraintBottom_toTopOf="@+id/reviewEditTextTextComment"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         tools:ignore="TouchTargetSizeCheck" />
-
 
     <Button
         android:id="@+id/reviewbutton"
         android:layout_width="216dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="560dp"
-        android:text="@string/reviewButton" />
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/reviewButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ExitReviewPopupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="363dp"
+        android:layout_marginBottom="683dp"
+        android:onClick="ReviewPopupExit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

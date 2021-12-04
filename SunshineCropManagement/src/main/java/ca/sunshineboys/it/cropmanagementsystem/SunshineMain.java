@@ -50,6 +50,8 @@ public class SunshineMain extends AppCompatActivity {
     private int BLUETOOTHPERMISSIONCODE = 1;
     ImageView AboutusExit;
     Dialog aboutUsPop;
+    Dialog reviewPop;
+    ImageView ReviewExit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,9 +70,11 @@ public class SunshineMain extends AppCompatActivity {
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        ReviewExit = findViewById(R.id.ExitReviewPopupButton);
         AboutusExit = findViewById(R.id.ExitAboutUsPopupButton);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        reviewPop = new Dialog(this);
         aboutUsPop = new Dialog(this);
         DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -124,7 +128,8 @@ public class SunshineMain extends AppCompatActivity {
                 aboutUsPop.show();
                 return true;
             case R.id.support_settings:
-                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                reviewPop.setContentView(R.layout.fragment_review);
+                reviewPop.show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -203,6 +208,8 @@ public class SunshineMain extends AppCompatActivity {
         alertDialog.show();
 
     }
+
+    public void ReviewPopupExit(View view) { reviewPop.dismiss(); }
 
     public void AboutUsPopupExit(View view) {
         aboutUsPop.dismiss();
