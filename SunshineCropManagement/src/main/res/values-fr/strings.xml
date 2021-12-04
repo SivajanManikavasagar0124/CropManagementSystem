@@ -93,5 +93,6 @@
     <string name="sensorNotConnected">Capteur non connecté !</string>
     <string name="sensorNotConnected2">Vous ne pouvez pas arroser vos plantes car le capteur n\'est pas connecté !</string>
     <string name="ok">d\'accord</string>
+    <string name="fab_content_desc">testing</string>
 
 </resources>
