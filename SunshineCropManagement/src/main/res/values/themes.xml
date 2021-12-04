@@ -16,12 +16,19 @@
 
     <style name="Theme.CropManagementSystem.NoActionBar">
         <item name="windowActionBar">false</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/Black</item>
+    </style>
     <style name="Theme.CropManagementSystem.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <item name="android:fontFamily">@font/poppinsbold</item>
+        <item name="android:textColorSecondary">@color/Black</item>
+        <item name="android:textColor">@color/Black</item>
     </style>
 
 
