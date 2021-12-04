@@ -31,9 +31,9 @@
     <string name="soildescription">Mesurez l’humidité en un clic!</string>
     <string name="soilunit">43x</string>
 
-    <string name="NohaTV1">température de récolte </string>
+    <string name="CropTemp">température de récolte </string>
     <string name="NohaS1">Celsius ou Fahrenheit </string>
-    <string name="NohaTV2">34 </string>
+    <string name="TempOfCrop">34C </string>
     <string name="remeasure_air_humidity">Remesurer l\'humidité de l\'air</string>
     <string name="air_humidity_level">Niveau d\'humidité de l\'air :</string>
     <string name="water_level">Water Level</string>
@@ -84,5 +84,6 @@
     <string name="software_issue">Problème de logiciel</string>
     <string name="it_is_currently_humid">Il fait actuellement HUMIDE</string>
     <string name="measure_air_humidity_in_real_time">Mesurez l\'humidité de l\'air en temps réel !</string>
+    <string name="measure_the_current_temperature">Mesurez la température actuelle !</string>
 
 </resources>
