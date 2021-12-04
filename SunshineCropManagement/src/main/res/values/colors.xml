@@ -153,4 +153,6 @@
     <color name="LogoGradient1">#9B8DA8</color>
     <color name="LogoGradient2">#C3BACA</color>
     <color name="HomePageColour">#E5E5E5</color>
+    <color name="LogoTextColour">#80619D</color>
+    <color name="DefaultTitleText">#5622E5</color>
 </resources>

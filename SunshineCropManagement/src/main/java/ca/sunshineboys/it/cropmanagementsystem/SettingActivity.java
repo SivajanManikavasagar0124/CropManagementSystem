@@ -1,5 +1,6 @@
 package ca.sunshineboys.it.cropmanagementsystem;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -32,7 +33,10 @@ public class SettingActivity extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
         return inflater.inflate(R.layout.setting_fragment, container, false);
+
     }
 
     @Override
