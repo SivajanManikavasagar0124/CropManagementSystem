@@ -9,18 +9,18 @@
 
     <EditText
         android:id="@+id/userBugInput"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="240dp"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="75dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine" />
 
     <TextView
         android:id="@+id/textbug"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="205dp"
         android:layout_marginEnd="98dp"
@@ -34,10 +34,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginStart="98dp"
         android:layout_marginTop="12dp"
+        android:gravity="center"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="603dp"
         android:fontFamily="@font/poppinsbold"
@@ -74,10 +75,11 @@
 
     <Button
         android:id="@+id/reportButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:layout_marginStart="138dp"
         android:layout_marginTop="302dp"
+        android:background="@color/purple_500"
         android:layout_marginEnd="138dp"
         android:fontFamily="@font/poppinsdefault"
         android:text="@string/send_report" />
