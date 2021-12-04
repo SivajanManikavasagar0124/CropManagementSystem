@@ -22,12 +22,12 @@
         android:layout_marginTop="49dp"
         android:src="@drawable/homepagelogo" />
 
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="210dp"
         android:src="@drawable/ic_sensorbox" />
-
 
     <TextView
         android:id="@+id/reviewtitle"
@@ -40,6 +40,59 @@
         android:text="@string/reviewtext"
         android:textColor="@color/black"
         android:textSize="35dp" />
+
+    <EditText
+        android:id="@+id/reviewEditTextTextName"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="290dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name : "
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/reviewEditTextTextComment"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="480dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Comment : "
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/reviewEditTextTextEmailAddress"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="350dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email :"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="420dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Phone :"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <Button
+        android:id="@+id/reviewbutton"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="560dp"
+        android:text="Submit" />
 
 
 
