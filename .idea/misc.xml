@@ -11,9 +11,28 @@
         <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/drawable/ic_sensorinfo.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/drawable/side_nav_bar.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/drawable/splash_background.xml" value="0.37864583333333335" />
-        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/fragment_soilmoisture.xml" value="0.3625" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout-land/activity_main.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout-land/app_bar_main.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout-land/content_main.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/aboutuspopup.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/activity_onboarding.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/app_bar_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/content_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/fragment_airhumidity.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/fragment_croptemperature.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/fragment_home.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/fragment_review.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/fragment_soilmoisture.xml" value="0.33" />
         <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/nav_header_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/pop_up.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/review.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/setting_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/slides_layout.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/task_scheduler_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/layout/water_level_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/menu/activity_main_drawer.xml" value="0.3625" />
+        <entry key="..\:/Users/Mubashir/AndroidStudioProjects/CropManagementSystem/SunshineCropManagement/src/main/res/menu/main.xml" value="0.3625" />
         <entry key="SunshineCropManagement/src/main/res/drawable/splash_background.xml" value="0.2611111111111111" />
         <entry key="SunshineCropManagement/src/main/res/layout-land/activity_main.xml" value="0.15885416666666666" />
         <entry key="SunshineCropManagement/src/main/res/layout-land/app_bar_main.xml" value="0.15885416666666666" />

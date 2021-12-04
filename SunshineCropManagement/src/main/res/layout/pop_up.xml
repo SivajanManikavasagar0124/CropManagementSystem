@@ -11,11 +11,12 @@
         android:id="@+id/userBugInput"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="240dp"
         android:layout_marginStart="75dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textbug"
@@ -34,14 +35,14 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="260dp"
+        android:layout_height="69dp"
         android:layout_marginStart="98dp"
         android:layout_marginTop="12dp"
-        android:gravity="center"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="603dp"
         android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
         android:text="@string/what_is_the_bug"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -75,12 +76,12 @@
 
     <Button
         android:id="@+id/reportButton"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="138dp"
         android:layout_marginTop="302dp"
-        android:background="@color/purple_500"
         android:layout_marginEnd="138dp"
+        android:background="@color/purple_500"
         android:fontFamily="@font/poppinsdefault"
         android:text="@string/send_report" />
 

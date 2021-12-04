@@ -28,7 +28,7 @@
     <string name="text1_soil">Soil Moisture</string>
     <string name="btn1_soil">Measure Moisture</string>
     <string name="swtch1_soil">Connected to the sensor: </string>
-   <string name="soildescription">Measure moisture with a click of a button!</string>
+    <string name="soildescription">Measure moisture with a click of a button!</string>
     <string name="soilunit">43x</string>
 
     <string name="NohaTV1">Crop Temperature </string>
@@ -41,7 +41,8 @@
     <string name="task_scheduler">Task Scheduler</string>
     <string name="connect_sensors">Connect Sensors</string>
     <string name="about_us">About Us</string>
-    <string name="support">Support</string>
+    <string name="support">Review</string>
+    <string name="reviewtext">Leave a Review</string>
     <string name="report_a_bug">Report a Bug</string>
     <string name="waterlevel">Water Level</string>
     <string name="taskscheduler">Task Scheduler</string>
@@ -78,5 +79,7 @@
     <string name="software_issue">Software Issue</string>
     <string name="hardware_issue">Hardware Issue</string>
     <string name="what_is_the_bug">What is the bug?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

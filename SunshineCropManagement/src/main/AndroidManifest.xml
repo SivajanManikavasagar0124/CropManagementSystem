@@ -11,11 +11,10 @@
         android:name="android.hardware.touchscreen"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <application
-
-
         android:allowBackup="true"
         android:icon="@mipmap/sunshine_boys_icon"
         android:label="@string/app_name"
@@ -27,24 +26,21 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".SunshineMain"
             android:label="@string/app_name"
-            android:theme="@style/Theme.CropManagementSystem.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.CropManagementSystem.NoActionBar"></activity>
         <activity
             android:name=".OnboardingActivity"
             android:label="Get Started!"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        </activity>
-
-        <activity android:name=".PopUp"
-            android:theme="@style/PopUpWindow"
-            ></activity>
-
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".PopUp"
+            android:theme="@style/PopUpWindow" />
     </application>
 
 </manifest>

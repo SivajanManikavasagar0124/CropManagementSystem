@@ -39,8 +39,9 @@
     <string name="water_level">Water Level</string>
     <string name="task_scheduler">Task Scheduler</string>
     <string name="connect_sensors">Connect Sensors</string>
-    <string name="about_us">About Us</string>
+    <string name="about_us">Review</string>
     <string name="support">Support</string>
+    <string name="reviewtext">Leave a Review</string>
     <string name="report_a_bug">Report a Bug</string>
     <string name="waterlevel">Water Level</string>
     <string name="taskscheduler">Task Scheduler</string>
