@@ -1,4 +1,4 @@
-/*package ca.sunshineboys.it.cropmanagementsystem.ui;
+package ca.sunshineboys.it.cropmanagementsystem.ui;
 
 import static java.util.regex.Pattern.compile;
 
@@ -27,17 +27,9 @@ import ca.sunshineboys.it.cropmanagementsystem.R;
 public class ReviewScreen extends AppCompatActivity  implements View.OnClickListener {
 
     private Firebase crop;
-    private EditText registerName, registerEmail, registerAge, registerPass, registercPass,registerPhone;
-    private ImageView castle;
-    private TextView registerUser;
-    private static final Pattern PASSWORD_PATTERN =
-            compile("^" +
-                    "(?=.*[0-9])" +         //at least 1 digit
-                    "(?=.*[A-Z])" +         //at least 1 upper case letter
-                    "(?=.*[a-zA-Z])" +      //any letter
-                    "(?=.*[@#$%^&=])" +    //at least 1 special character
-                    ".{8,}" +               //at least 4 characters
-                    "$");
+    private EditText reviewName, reviewEmail,reviewPhone;
+    private TextView reviewUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,93 +40,60 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
 
 
 
-        registerUser = (Button) findViewById(R.id.reviewbutton);
-        registerUser.setOnClickListener(this);
+        reviewUser = (Button) findViewById(R.id.reviewbutton);
+        reviewUser.setOnClickListener(this);
 
-        registerName = (EditText) findViewById(R.id.register_name);
-        registerAge = (EditText) findViewById(R.id.register_Age);
-        registerPhone = (EditText) findViewById(R.id.register_phone);
-        registerEmail = (EditText) findViewById(R.id.register_email);
-        registerPass = (EditText) findViewById(R.id.register_password);
-        registercPass = (EditText) findViewById(R.id.register_confirm_password);
+        reviewName = (EditText) findViewById(R.id.reviewEditTextTextName);
+        reviewPhone = (EditText) findViewById(R.id.reviewEditTextPhone);
+        reviewEmail = (EditText) findViewById(R.id.reviewEditTextTextEmailAddress);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.castimage:
-                startActivity(new Intent(this, Login.class));
-                break;
-            case R.id.registerUser:
-                registerUser();
-                break;
+           // case R.id.castimage:
+               // startActivity(new Intent(this, Login.class));
+               // break;
+           // case R.id.reviewUser:
+               // registerUser();
+             //   break;
         }
     }
 
     private void registerUser() {
-        String email = registerEmail.getText().toString().trim();
-        String password = registerPass.getText().toString().trim();
-        String name = registerName.getText().toString().trim();
-        String age = registerAge.getText().toString().trim();
-        String phone = registerPhone.getText().toString().trim();
-        String confirmpass = registercPass.getText().toString().trim();
+        String email = reviewEmail.getText().toString().trim();
+        String name = reviewName.getText().toString().trim();
+        String phone = reviewPhone.getText().toString().trim();
 
         if (name.isEmpty()) {
-            registerName.setError(getString(R.string.reviewName));
-            registerName.requestFocus();
+            reviewName.setError(getString(R.string.reviewName));
+            reviewName.requestFocus();
             return;
         }
-        if (age.isEmpty()) {
-            registerName.setError(getString(R.string.age_req));
-            registerName.requestFocus();
-            return;
-        }
-        if (phone.isEmpty()) {
-            registerPhone.setError("Phone number is required");
-            registerName.requestFocus();
-            return;
 
+        if (phone.isEmpty()) {
+            reviewPhone.setError("Phone number is required");
+            reviewName.requestFocus();
+            return;
 
         }
         if (email.isEmpty()) {
-            registerEmail.setError(getString(R.string.email_req));
-            registerEmail.requestFocus();
+            reviewEmail.setError(getString(R.string.reviewEmail));
+            reviewEmail.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            registerEmail.setError(getString(R.string.try_email));
-            registerEmail.requestFocus();
+            reviewEmail.setError(getString(R.string.reviewEmail));
+            reviewEmail.requestFocus();
             return;
 
         }
-        if (password.isEmpty()) {
-            registerPass.setError(getString(R.string.pass_req));
-            registerPass.requestFocus();
-            return;
-        }
-        else if (!PASSWORD_PATTERN.matcher(password).matches()){
-            registerPass.setError("Password must contain:" +
-                    " One digit, One Capital Letter, One special character, A minimum of four characters");
-            registerPass.requestFocus();
-            return;
 
-        } else {
-            registerPass.setError(null);
+    }}
 
-
-        }
-        if (confirmpass.isEmpty()) {
-            registercPass.setError("Password Confirmation Required");
-            registercPass.requestFocus();
-            return;
-        }
-        if (!password.equals(confirmpass)) {
-            registercPass.setError("Confirmation Password Must Match");
-            registercPass.requestFocus();
-            return;
-        }
-*/
-       /* crop.createUserWithEmailAndPassword(email, password)
+/*
+        crop.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -162,4 +121,3 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
                     }
                 });
     }*/
-//}
