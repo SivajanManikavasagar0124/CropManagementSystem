@@ -126,26 +126,31 @@ CENG 317 - 0NF
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp">
                 <ImageView
+                    android:id="@+id/soilMoistImage"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="15dp"
                     android:src="@drawable/soilmoist" />
                 <ImageView
+                    android:id="@+id/taskSchedImage"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="15dp"
                     android:src="@drawable/tasksche" />
                 <ImageView
+                    android:id="@+id/cropTempImage"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="15dp"
                     android:src="@drawable/templogo" />
                 <ImageView
+                    android:id="@+id/airHumidityImage"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="15dp"
                     android:src="@drawable/windlogo" />
                 <ImageView
+                    android:id="@+id/waterLevelImage"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="15dp"
