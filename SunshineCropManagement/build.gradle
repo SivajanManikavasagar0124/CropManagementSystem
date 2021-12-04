@@ -42,6 +42,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.gelitenight.waveview:waveview:1.0.0'
     implementation 'com.google.firebase:firebase-common-ktx:19.5.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
