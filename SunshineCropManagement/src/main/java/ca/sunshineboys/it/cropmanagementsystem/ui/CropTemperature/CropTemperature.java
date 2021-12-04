@@ -30,11 +30,9 @@ public class CropTemperature extends Fragment {
         galleryViewModel =
                 new ViewModelProvider(this).get(TemperatureViewModel.class);
         View root = inflater.inflate(R.layout.fragment_croptemperature, container, false);
-        final TextView textView = root.findViewById(R.id.NohaTextView);
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
             }
         });
         return root;
