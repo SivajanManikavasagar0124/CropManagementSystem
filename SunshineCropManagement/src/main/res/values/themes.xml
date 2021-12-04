@@ -47,4 +47,9 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
+
+    <style name="PurpleAccent">
+        <item name="colorAccent">@color/DefaultTitleText</item>
+    </style>
+
 </resources>

@@ -31,11 +31,11 @@
     <string name="soildescription">Measure moisture with a click of a button!</string>
     <string name="soilunit">43x</string>
 
-    <string name="NohaTV1">Crop Temperature </string>
+    <string name="CropTemp">Crop Temperature </string>
     <string name="NohaS1">Celsius or Fahrenheit </string>
-    <string name="NohaTV2">34 </string>
+    <string name="TempOfCrop">34C </string>
     <string name="NohaB1" translatable="false"> Reanalyze </string>
-    <string name="remeasure_air_humidity">Recalibrate Sensor</string>
+    <string name="remeasure_air_humidity">Remeasure Air Humidity</string>
     <string name="air_humidity_level">HUMID</string>
     <string name="water_level">Water Level</string>
     <string name="task_scheduler">Task Scheduler</string>
@@ -71,22 +71,34 @@
     <string name="detailed_sensor_data">Detailed Sensor Data</string>
     <string name="home_frag">Home Frag</string>
     <string name="water_now">Water Now</string>
-    <string name="string_water_now" translatable="false"></string>
     <string name="OnboardingPage1Desc">Please enable bluetooth permissions if you haven\'t already. If you see your product on the screen please select it and move on to the next page.</string>
     <string name="OnboardingPage2Desc">\"Hi! Welcome to the Crop Management System App, You\'re almost ready to use your new product! In the next few steps we\'ll guide you through the process of setting up your sensor to be used with the app. \"</string>
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
-    <string name="dry">DRY</string>
+    <string name="dry">Dry</string>
     <string name="fahrenheit" translatable="false">Imperial</string>
     <string name="celsius" translatable="false">Metric</string>
     <string name="prefTemp">Preferred Units</string>
-    <string name="humid">HUMID</string>
+    <string name="humid">Humid</string>
     <string name="_80placeholder" translatable="false">80%</string>
     <string name="send_report">Send Report</string>
     <string name="software_issue">Software Issue</string>
     <string name="hardware_issue">Hardware Issue</string>
     <string name="what_is_the_bug">What is the bug?</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="it_is_currently_humid">It is currently HUMID</string>
+    <string name="measure_air_humidity_in_real_time">Measure Air Humidity in real time!</string>
+    <string name="measure_the_current_temperature">Measure the current temperature!</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="nowWatering">Plants are being watered!</string>
+    <string name="WaterError">Plants are currently being watered! Avoid pressing the button multiple times!</string>
+    <string name="completeWater">Finished watering the plants!</string>
+    <string name="watererror2">Plants were not watered!</string>
+    <string name="sensorNotConnected">Sensor not Connected!</string>
+    <string name="sensorNotConnected2">You can not water your plants because the sensor is not connected!</string>
+    <string name="ok">OK</string>
+    <string name="fab_content_desc">testing</string>
 
 </resources>

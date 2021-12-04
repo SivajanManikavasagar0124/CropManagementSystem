@@ -1,5 +1,7 @@
 package ca.sunshineboys.it.cropmanagementsystem.ui.Home;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -12,7 +14,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -29,7 +33,14 @@ import java.time.Duration;
 import java.util.HashMap;
 
 import ca.sunshineboys.it.cropmanagementsystem.R;
+import ca.sunshineboys.it.cropmanagementsystem.SettingActivity;
+import ca.sunshineboys.it.cropmanagementsystem.SunshineMain;
+import ca.sunshineboys.it.cropmanagementsystem.TaskSchedulerActivity;
+import ca.sunshineboys.it.cropmanagementsystem.WaterLevelActivity;
+import ca.sunshineboys.it.cropmanagementsystem.ui.AirHumidity.AirHumidity;
+import ca.sunshineboys.it.cropmanagementsystem.ui.CropTemperature.CropTemperature;
 import ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture.MoistureViewModel;
+import ca.sunshineboys.it.cropmanagementsystem.ui.SoilMoisture.SoilMoisture;
 
 public class HomeFragment extends Fragment {
 
@@ -37,6 +48,12 @@ public class HomeFragment extends Fragment {
     ImageView sensorPicture;
     TextView sensorText;
     Button waterNow;
+
+    ImageView soilMoisture;
+    ImageView taskSched;
+    ImageView cropTemp;
+    ImageView airHumidity;
+    ImageView waterLevel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,6 +67,13 @@ public class HomeFragment extends Fragment {
         waterNow = root.findViewById(R.id.waternowButton);
 
 
+        //Quick Menu Items
+        soilMoisture = root.findViewById(R.id.soilMoistImage);
+        taskSched = root.findViewById(R.id.taskSchedImage);
+        cropTemp = root.findViewById(R.id.cropTempImage);
+        airHumidity = root.findViewById(R.id.airHumidityImage);
+        waterLevel = root.findViewById(R.id.waterLevelImage);
+
         DatabaseReference waterNowRef = database.getReference("Watering");
         DatabaseReference sensorRef = database.getReference("sensorConnected");
 
@@ -58,10 +82,10 @@ public class HomeFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
             if (snapshot.exists()){
                 sensorPicture.setImageResource(R.drawable.greenconnection);
-                sensorText.setText("Connected");
+                sensorText.setText(R.string.connected);
             }else{ //If snapshot == NULL show disconnected
                 sensorPicture.setImageResource(R.drawable.redconnection);
-                sensorText.setText("Disconnected");
+                sensorText.setText(R.string.disconnected);
             }
             }
 
@@ -70,9 +94,10 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        Snackbar nowWatering = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants are being watered!", Snackbar.LENGTH_LONG);
-        Snackbar WaterERROR = Snackbar.make(getActivity().findViewById(android.R.id.content), "Plants are currently being watered! Avoid pressing the button multiple times!", Snackbar.LENGTH_LONG);
-        Snackbar completeWater = Snackbar.make(getActivity().findViewById(android.R.id.content), "Finished watering the plants!",Snackbar.LENGTH_SHORT);
+        Snackbar nowWatering = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.nowWatering, Snackbar.LENGTH_LONG);
+        Snackbar WaterERROR = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.WaterError, Snackbar.LENGTH_LONG);
+        Snackbar completeWater = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.completeWater,Snackbar.LENGTH_SHORT);
+        Snackbar WATERERROR2 = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.watererror2,Snackbar.LENGTH_SHORT);
         waterNow.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -82,27 +107,53 @@ public class HomeFragment extends Fragment {
                                                     if (snapshot.exists()){
                                                         WaterERROR.show();
                                                     }else{
-                                                                waterNowRef.setValue("1", new DatabaseReference.CompletionListener() {
-                                                                    @Override
-                                                                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                                                        nowWatering.show();
-                                                                    }
-                                                                });
+
+                                                        sensorRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                            @Override
+                                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                if (snapshot.exists()){
+                                                                    waterNowRef.setValue("1", new DatabaseReference.CompletionListener() {
+                                                                        @Override
+                                                                        public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                                                                            nowWatering.show();
+                                                                        }
+                                                                    });
+                                                                    new Handler().postDelayed(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                            waterNowRef.setValue(null, new DatabaseReference.CompletionListener() {
+                                                                                @Override
+                                                                                public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                                                                                    completeWater.show();
+                                                                                }
+                                                                            });
+                                                                        }
+                                                                    },5000 );
+                                                                }else{
+                                                                    AlertDialog.Builder DIAWATERRROR = new AlertDialog.Builder(getActivity());
+                                                                    DIAWATERRROR.setTitle(R.string.sensorNotConnected);
+                                                                    DIAWATERRROR.setIcon(R.drawable.alert_icon);
+                                                                    DIAWATERRROR.setMessage(R.string.sensorNotConnected2);
+                                                                    DIAWATERRROR.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                                                        @Override
+                                                                        public void onClick(DialogInterface dialog, int which) {
+                                                                            WATERERROR2.show();
+                                                                        }
+                                                                    });
+                                                                    AlertDialog alertDialog = DIAWATERRROR.create();
+                                                                    alertDialog.show();
+                                                                }
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                                            }
+                                                        });
 
 
 
                                                     }
-                                                    new Handler().postDelayed(new Runnable() {
-                                                        @Override
-                                                        public void run() {
-                                                            waterNowRef.setValue(null, new DatabaseReference.CompletionListener() {
-                                                                @Override
-                                                                public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                                                    completeWater.show();
-                                                                }
-                                                            });
-                                                        }
-                                                    },5000 );
 
 
                                                 }
@@ -116,6 +167,55 @@ public class HomeFragment extends Fragment {
 
                                         }
                                     });
+
+        //Quick Menu Listeners
+        soilMoisture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new SoilMoisture());
+                fragmentTransaction.commit();
+            }
+        });
+
+        taskSched.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new TaskSchedulerActivity());
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        cropTemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new CropTemperature());
+                fragmentTransaction.commit();
+            }
+        });
+
+        airHumidity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new AirHumidity());
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        waterLevel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, new WaterLevelActivity());
+                fragmentTransaction.commit();
+            }
+        });
+
 
         /*homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
