@@ -1,5 +1,7 @@
 package ca.sunshineboys.it.cropmanagementsystem.ui;
 
+import static java.util.regex.Pattern.compile;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.ktx.Firebase;
+
+import java.util.regex.Pattern;
 
 import ca.sunshineboys.it.cropmanagementsystem.R;
 
@@ -21,6 +31,11 @@ public class ReviewFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private Firebase crop;
+    private EditText reviewName, reviewEmail,reviewPhone,reviewComment;
+    private Button reviewBtn;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -54,6 +69,10 @@ public class ReviewFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+            crop = Firebase.INSTANCE;
+
+
         }
     }
 
@@ -62,5 +81,7 @@ public class ReviewFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_review, container, false);
+
+
     }
 }
