@@ -45,8 +45,8 @@
         android:textSize="40dp" />
 
     <ImageView
-        android:layout_width="312dp"
-        android:layout_height="293dp"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="280dp"
         android:src="@drawable/ic_vectorcircle"/>
@@ -55,13 +55,13 @@
         android:id="@+id/waterlevelPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="325dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="345dp"
         android:fontFamily="@font/poppinsdefault"
         android:gravity="center"
         android:text="12%"
         android:textColor="@color/DefaultTitleText"
-        android:textSize="125dp" />
+        android:textSize="90dp" />
 
 
 </RelativeLayout>
