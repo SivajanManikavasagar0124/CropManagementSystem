@@ -51,7 +51,7 @@
         android:id="@+id/portlock"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="210dp"
+        android:layout_marginStart="174dp"
         android:layout_marginTop="234dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="468dp"
@@ -66,26 +66,37 @@
         android:layout_marginTop="312dp"
         tools:ignore="TouchTargetSizeCheck" />
 
+
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_vectorrectangle"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="375dp"/>
-
+        android:layout_marginTop="455dp"/>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_rectsmall"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="375dp"/>
+    <TextView
+        android:id="@+id/Colourblindtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/DefaultTitleText"
+        android:layout_marginTop="393dp"
+        android:fontFamily="@font/poppinsdefault"
+        android:text="Colour Blind Mode"
+        />
 
     <RadioGroup
         android:layout_width="200dp"
         android:layout_height="85dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="415dp"
-        android:layout_marginEnd="124dp"
-        android:textAlignment="center"
-        android:layout_marginBottom="213dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="495dp"
+        android:textAlignment="center">
 
         <RadioButton
             android:id="@+id/celsiusButton"
@@ -98,7 +109,7 @@
             android:id="@+id/fahrenheitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/poppinsdefault"
             android:text="@string/fahrenheit"
             tools:ignore="TouchTargetSizeCheck" />
@@ -109,7 +120,7 @@
         android:layout_width="165dp"
         android:layout_height="75dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="470dp"
         android:fontFamily="@font/poppinsdefault"
         android:text="@string/prefTemp"
         android:textAlignment="center"
@@ -129,4 +140,12 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="45dp"
         android:src="@drawable/settingslogo"/>
+
+    <Switch
+        android:id="@+id/colourblindswitch"
+        android:layout_width="165dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="393dp"
+        tools:ignore="TouchTargetSizeCheck" />
 </RelativeLayout>

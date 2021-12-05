@@ -3,6 +3,7 @@ package ca.sunshineboys.it.cropmanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,7 +19,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -49,7 +51,7 @@ public class SettingActivity extends Fragment {
 
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
         View root = inflater.inflate(R.layout.setting_fragment, container, false);
-
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("settingsPREF", MODE_PRIVATE);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("fahrenheit");
 
