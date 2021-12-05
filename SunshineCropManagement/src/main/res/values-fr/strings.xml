@@ -29,11 +29,11 @@
     <string name="btn1_soil">Mesurer l\'humidité</string>
     <string name="swtch1_soil">Connecté au capteur: </string>
     <string name="soildescription">Mesurez l’humidité en un clic!</string>
-    <string name="soilunit">43x</string>
+    <string name="soilunit">x</string>
 
     <string name="CropTemp">température de récolte </string>
     <string name="NohaS1">Celsius ou Fahrenheit </string>
-    <string name="TempOfCrop">34C </string>
+    <string name="TempOfCrop">"c "</string>
     <string name="remeasure_air_humidity">Remesurer l\'humidité de l\'air</string>
     <string name="air_humidity_level">Niveau d\'humidité de l\'air :</string>
     <string name="water_level">Niveau d’eau</string>
@@ -94,5 +94,6 @@
     <string name="sensorNotConnected2">Vous ne pouvez pas arroser vos plantes car le capteur n\'est pas connecté !</string>
     <string name="ok">d\'accord</string>
     <string name="fab_content_desc">testing</string>
+    <string name="c">c</string>
 
 </resources>
