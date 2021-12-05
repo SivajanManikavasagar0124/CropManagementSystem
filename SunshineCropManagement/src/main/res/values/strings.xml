@@ -100,5 +100,6 @@
     <string name="sensorNotConnected2">You can not water your plants because the sensor is not connected!</string>
     <string name="ok">OK</string>
     <string name="fab_content_desc">testing</string>
+    <string name="percent" translatable="false">%</string>
 
 </resources>
