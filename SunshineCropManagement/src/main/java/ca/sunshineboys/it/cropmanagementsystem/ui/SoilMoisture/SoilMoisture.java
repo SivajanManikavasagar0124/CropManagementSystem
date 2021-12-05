@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -44,6 +45,7 @@ public class SoilMoisture extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
                 new ViewModelProvider(this).get(MoistureViewModel.class);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Soil Moisture");
         View root = inflater.inflate(R.layout.fragment_soilmoisture, container, false);
 
         firebaseDatabase = FirebaseDatabase.getInstance();

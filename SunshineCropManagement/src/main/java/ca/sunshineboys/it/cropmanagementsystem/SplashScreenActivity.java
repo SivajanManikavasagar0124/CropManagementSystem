@@ -26,19 +26,20 @@ public class SplashScreenActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences =
                        getSharedPreferences("onBoardingAct", MODE_PRIVATE);
                 // Check if we need to display our OnboardingSupportFragment
-                if (!sharedPreferences.getBoolean("COMPLETED_ONBOARDING", false)) {
+              //  if (!sharedPreferences.getBoolean("COMPLETED_ONBOARDING", false)) {
                     // The user hasn't seen the OnboardingSupportFragment yet, so show it
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean("COMPLETED_ONBOARDING", true);
-                    editor.commit();
+                   // SharedPreferences.Editor editor = sharedPreferences.edit();
+                   // editor.putBoolean("COMPLETED_ONBOARDING", true);
+                   // editor.commit();
                     startActivity(new Intent(SplashScreenActivity.this, OnboardingActivity.class));
                     finish();
-                } else{
-                Intent i = new Intent(SplashScreenActivity.this, SunshineMain.class);
-                startActivity(i);
+               // } else{
+                //Intent i = new Intent(SplashScreenActivity.this, SunshineMain.class);
+               // startActivity(i);
                 // close this activity
-                finish();
-            } }
+               // finish();
+           // }
+                }
         }, 3000);
     }
 }

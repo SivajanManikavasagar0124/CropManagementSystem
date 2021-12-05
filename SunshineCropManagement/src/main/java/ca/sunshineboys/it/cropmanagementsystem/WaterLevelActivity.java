@@ -1,5 +1,6 @@
 package ca.sunshineboys.it.cropmanagementsystem;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -47,6 +48,7 @@ public class WaterLevelActivity extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Water Level");
       View root = inflater.inflate(R.layout.water_level_fragment, container, false);
 
         firebaseDatabase = FirebaseDatabase.getInstance();

@@ -11,10 +11,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
 Muhammad Qamar N01344609
@@ -31,23 +27,10 @@ public class TaskSchedulerActivity extends Fragment {
         return new TaskSchedulerActivity();
     }
 
-    FloatingActionButton fab;
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.task_scheduler_fragment, container, false);
-
-        fab = root.findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"Text!",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        return root;
+        return inflater.inflate(R.layout.task_scheduler_fragment, container, false);
     }
 
     @Override
