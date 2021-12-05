@@ -53,14 +53,14 @@ CENG 317 - 0NF
         android:layout_width="275dp"
         android:layout_height="275dp"
         android:src="@drawable/ic_vectorcircle"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="287dp"/>
 
     <TextView
         android:id="@+id/soilunits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
+        android:layout_marginStart="105dp"
         android:layout_marginTop="350dp"
         android:fontFamily="@font/poppinsdefault"
         android:gravity="center"

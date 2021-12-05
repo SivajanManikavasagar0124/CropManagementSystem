@@ -14,6 +14,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import ca.sunshineboys.it.cropmanagementsystem.R;
 
 /*
@@ -26,26 +32,35 @@ CENG 317 - 0NF
  */
 public class SoilMoisture extends Fragment {
 
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
     private MoistureViewModel slideshowViewModel;
     private Button soilBtn;
 
+    TextView soilText;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
-
-/*
-        soilBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(),"Sensor is measuring the moisture",Toast.LENGTH_LONG).show();
-            }
-        });
-*/
         slideshowViewModel =
                 new ViewModelProvider(this).get(MoistureViewModel.class);
         View root = inflater.inflate(R.layout.fragment_soilmoisture, container, false);
-       // soilBtn = root.findViewById(R.id.soilbutton);
-        //final TextView textView = root.findViewById(R.id.soildescription);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("soilMoisture");
+
+        soilBtn = root.findViewById(R.id.soilbutton);
+        soilText = root.findViewById(R.id.soilunits);
+
+        getData();
+
+        soilBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getData();
+            }
+        });
+
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s)
@@ -54,7 +69,20 @@ public class SoilMoisture extends Fragment {
             }
         });
         return root;
+    }
 
+    private void getData() {
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String value = snapshot.getValue(String.class);
+                soilText.setText(value + getString(R.string.x));
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }
