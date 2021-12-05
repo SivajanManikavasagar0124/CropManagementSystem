@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -81,11 +82,14 @@ public class CropTemperature extends Fragment {
     }
 
     private void getData() {
+        Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.errorUpdating,Snackbar.LENGTH_SHORT);
+        Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.updatingData,Snackbar.LENGTH_SHORT);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String value = snapshot.getValue(String.class);
                 val = Double.parseDouble(value);
+                sensorUpdating.show();
                 unit.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -108,7 +112,7 @@ public class CropTemperature extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                sensorError.show();
             }
         });
     }

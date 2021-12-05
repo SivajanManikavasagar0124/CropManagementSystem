@@ -1,9 +1,5 @@
 package ca.sunshineboys.it.cropmanagementsystem.ui.AirHumidity;
 
-import android.annotation.SuppressLint;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,21 +9,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import ca.sunshineboys.it.cropmanagementsystem.Post;
 import ca.sunshineboys.it.cropmanagementsystem.R;
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -46,6 +38,9 @@ public class AirHumidity extends Fragment {
 
     Button humidityMeasure;
     TextView humidityText;
+    ProgressBar humidBar;
+
+    int val;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -59,9 +54,7 @@ public class AirHumidity extends Fragment {
 
         humidityMeasure = root.findViewById(R.id.airHumidityButton);
         humidityText = root.findViewById(R.id.humidityLevelText);
-
-        Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), "Unable to update sensor please try again.",Snackbar.LENGTH_SHORT);
-        Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), "Currently updating data from the sensor.",Snackbar.LENGTH_SHORT);
+        humidBar = root.findViewById(R.id.progressBarAirHumid);
 
         getData();
 
@@ -76,16 +69,21 @@ public class AirHumidity extends Fragment {
     }
 
     private void getData() {
+        Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.errorUpdating,Snackbar.LENGTH_SHORT);
+        Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.updatingData,Snackbar.LENGTH_SHORT);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String value = snapshot.getValue(String.class);
                 humidityText.setText(value + getString(R.string.percent));
+                val = Integer.parseInt(value);
+                humidBar.setProgress(val);
+                sensorUpdating.show();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                sensorError.show();
             }
         });
     }
