@@ -96,7 +96,9 @@
     <string name="fab_content_desc">testing</string>
     <string name="c">c</string>
     <string name="f">f</string>
-    <string name="tempChanged">Changed from Celsius to Fahrenheit</string>
-    <string name="tempChanged2">Changed from Fahrenheit to Celsius</string>
+    <string name="tempChanged">Changé de Celsius à Fahrenheit</string>
+    <string name="tempChanged2">Changé de Fahrenheit à Celsius</string>
+    <string name="updatingData">Mise à jour actuelle des données du capteur.</string>
+    <string name="errorUpdating">Impossible de mettre à jour le capteur, veuillez réessayer.</string>
 
 </resources>

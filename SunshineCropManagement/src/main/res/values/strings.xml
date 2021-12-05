@@ -105,5 +105,7 @@
     <string name="f">f</string>
     <string name="tempChanged">Changed from Celsius to Fahrenheit</string>
     <string name="tempChanged2">Changed from Fahrenheit to Celsius</string>
+    <string name="updatingData">Currently updating data from the sensor.</string>
+    <string name="errorUpdating">Unable to update sensor please try again.</string>
 
 </resources>
