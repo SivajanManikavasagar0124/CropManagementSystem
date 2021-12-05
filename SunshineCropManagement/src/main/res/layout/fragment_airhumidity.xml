@@ -91,7 +91,7 @@ CENG 317 - 0NF
         android:layout_marginTop="335dp"
         android:fontFamily="@font/poppinsdefault"
         android:gravity="center"
-        android:text="@string/_80placeholder"
+        android:text="@string/percent"
         android:textColor="@color/DefaultTitleText"
         android:textSize="90dp" />
 

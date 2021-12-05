@@ -39,7 +39,8 @@ CENG 317 - 0NF
  */
 public class AirHumidity extends Fragment {
 
- //   private DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
 
     private HumidityViewModel homeViewModel;
 
@@ -52,7 +53,8 @@ public class AirHumidity extends Fragment {
                 new ViewModelProvider(this).get(HumidityViewModel.class);
         View root = inflater.inflate(R.layout.fragment_airhumidity, container, false);
 
-     //   databaseReference = FirebaseDatabase.getInstance().getReference();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("temperatureHumidity");
 
         humidityMeasure = root.findViewById(R.id.airHumidityButton);
         humidityText = root.findViewById(R.id.humidityLevelText);
@@ -60,31 +62,33 @@ public class AirHumidity extends Fragment {
         Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), "Unable to update sensor please try again.",Snackbar.LENGTH_SHORT);
         Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), "Currently updating data from the sensor.",Snackbar.LENGTH_SHORT);
 
+        getData();
+
         humidityMeasure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                ValueEventListener postListener = new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                      //  Post post = snapshot.getValue(Post.class);
-                        int humidity = snapshot.child("temperatureHumidity").getValue(Integer.class);
-                        humidityText.setText(humidity);
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                };
-               //mPostReference.addValueEventListener(postListener);
-               */
-
+                getData();
             }
         });
 
         return root;
     }
+
+    private void getData() {
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String value = snapshot.getValue(String.class);
+                humidityText.setText(value + getString(R.string.percent));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 
 
 }

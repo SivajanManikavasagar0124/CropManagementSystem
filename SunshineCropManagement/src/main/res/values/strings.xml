@@ -80,7 +80,6 @@
     <string name="celsius" translatable="false">Metric</string>
     <string name="prefTemp">Preferred Units</string>
     <string name="humid">Humid</string>
-    <string name="_80placeholder" translatable="false">80%</string>
     <string name="send_report">Send Report</string>
     <string name="software_issue">Software Issue</string>
     <string name="hardware_issue">Hardware Issue</string>
