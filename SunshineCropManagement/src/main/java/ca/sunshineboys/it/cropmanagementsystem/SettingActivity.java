@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -26,6 +27,8 @@ public class SettingActivity extends Fragment {
 
     private SettingViewModel mViewModel;
 
+    RadioButton fBtn;
+
     public static SettingActivity newInstance() {
         return new SettingActivity();
     }
@@ -35,8 +38,12 @@ public class SettingActivity extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
-        return inflater.inflate(R.layout.setting_fragment, container, false);
+        View root = inflater.inflate(R.layout.setting_fragment, container, false);
 
+        fBtn = root.findViewById(R.id.fahrenheitButton);
+
+
+        return root;
     }
 
     @Override

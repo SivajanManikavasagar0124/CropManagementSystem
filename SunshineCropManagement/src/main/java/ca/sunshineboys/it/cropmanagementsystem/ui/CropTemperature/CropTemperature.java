@@ -35,11 +35,18 @@ public class CropTemperature extends Fragment {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    DatabaseReference unit;
 
     private TemperatureViewModel galleryViewModel;
 
     TextView tempText;
     Button tempButt;
+
+    double val;
+    double fahr;
+    int fahren;
+
+    Long num = Long.valueOf(1);
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,9 +57,11 @@ public class CropTemperature extends Fragment {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("absoluteTemperature");
+        unit = firebaseDatabase.getReference("fahrenheit");
 
         tempButt = root.findViewById(R.id.NohaButton);
         tempText = root.findViewById(R.id.tempLevelText);
+
 
         getData();
 
@@ -76,7 +85,25 @@ public class CropTemperature extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String value = snapshot.getValue(String.class);
-                tempText.setText(value + getString(R.string.c));
+                val = Double.parseDouble(value);
+                unit.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String data = snapshot.getValue(String.class);
+                        if (data.equals("1")) {
+                            fahr = val * 1.8 + 32;
+                            fahren = (int) fahr;
+                            tempText.setText(fahren + getString(R.string.f));
+                        } else {
+                            tempText.setText(value + getString(R.string.c));
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
 
             @Override

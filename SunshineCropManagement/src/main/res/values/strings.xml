@@ -102,5 +102,6 @@
     <string name="percent" translatable="false">%</string>
     <string name="x" translatable="false">x</string>
     <string name="c">c</string>
+    <string name="f">f</string>
 
 </resources>
