@@ -14,6 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.ktx.Firebase;
+
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
 Muhammad Qamar N01344609
@@ -25,9 +31,13 @@ CENG 317 - 0NF
 
 public class SettingActivity extends Fragment {
 
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
     private SettingViewModel mViewModel;
 
     RadioButton fBtn;
+    RadioButton cBtn;
 
     public static SettingActivity newInstance() {
         return new SettingActivity();
@@ -40,8 +50,30 @@ public class SettingActivity extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
         View root = inflater.inflate(R.layout.setting_fragment, container, false);
 
-        fBtn = root.findViewById(R.id.fahrenheitButton);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("fahrenheit");
 
+        fBtn = root.findViewById(R.id.fahrenheitButton);
+        cBtn = root.findViewById(R.id.celsiusButton);
+
+        Snackbar tempChange = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.tempChanged, Snackbar.LENGTH_LONG);
+        Snackbar tempChange2 = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.tempChanged2, Snackbar.LENGTH_LONG);
+
+        if (fBtn.isChecked()) {
+            databaseReference.setValue("1", new DatabaseReference.CompletionListener() {
+                @Override
+                public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                    tempChange.show();
+                }
+            });
+        } else if (cBtn.isChecked()) {
+            databaseReference.setValue("0", new DatabaseReference.CompletionListener() {
+                @Override
+                public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                    tempChange2.show();
+                }
+            });
+        }
 
         return root;
     }

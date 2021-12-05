@@ -103,5 +103,7 @@
     <string name="x" translatable="false">x</string>
     <string name="c">c</string>
     <string name="f">f</string>
+    <string name="tempChanged">Changed from Celsius to Fahrenheit</string>
+    <string name="tempChanged2">Changed from Fahrenheit to Celsius</string>
 
 </resources>
