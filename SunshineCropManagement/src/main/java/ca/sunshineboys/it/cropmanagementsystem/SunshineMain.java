@@ -99,8 +99,8 @@ public class SunshineMain extends AppCompatActivity {
         phone = findViewById(R.id.reviewEditTextPhone);
 
 
-/*
 
+/*
         reviewSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,6 +133,7 @@ public class SunshineMain extends AppCompatActivity {
                     comment.requestFocus();
                     return;
                 }
+                /*
                 DatabaseReference usersRef = users.child("users");
             Map<String, Object> userx = new HashMap<>();
            // userx.put(phonex, new User(namex,emailx, commentx,ratingNumber));
@@ -141,8 +142,8 @@ public class SunshineMain extends AppCompatActivity {
 
             }
         });
+*/
 
-        */
 
 //-------------------------------------------------------------------------/
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
