@@ -11,12 +11,14 @@ CENG 317 - 0NF
 //The design patterns used in the code are model view
 import android.Manifest;
 import android.app.Dialog;
+import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
@@ -72,6 +74,23 @@ public class SunshineMain extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null) {
+            AlertDialog.Builder DIANoBT = new AlertDialog.Builder(this);
+            DIANoBT.setTitle("Device does not support Bluetooth!");
+            DIANoBT.setIcon(R.drawable.alert_icon);
+            DIANoBT.setMessage("Your device does not support bluetooth. Bluetooth is required to run Crop Management! Please switch to a device that supports bluetooth.");
+            DIANoBT.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            AlertDialog alertDialog = DIANoBT.create();
+            alertDialog.show();
+        }
+        if (!bluetoothAdapter.isEnabled()) {
+            requestBluetoothPerms();
+        }
 
      toolbar.setTitleTextColor(getResources().getColor(R.color.Black));
     toolbar.getOverflowIcon().setTint(ContextCompat.getColor(this, R.color.Black));
@@ -190,9 +209,9 @@ public class SunshineMain extends AppCompatActivity {
                 startActivity(new Intent(SunshineMain.this, PopUp.class));
                 return true;
             case R.id.sensor_settings:
-                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Opening Bluetooth Settings", Toast.LENGTH_SHORT).show();
                 if (ContextCompat.checkSelfPermission(SunshineMain.this, Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED){
-                    //Do Nothing
+                    startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS));
                 } else{
                     requestBluetoothPerms();
                 }
