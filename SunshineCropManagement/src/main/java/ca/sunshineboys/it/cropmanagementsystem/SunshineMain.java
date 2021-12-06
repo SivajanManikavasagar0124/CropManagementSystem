@@ -82,8 +82,7 @@ public class SunshineMain extends AppCompatActivity {
             DIANoBT.setMessage("Your device does not support bluetooth. Bluetooth is required to run Crop Management! Please switch to a device that supports bluetooth.");
             DIANoBT.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(DialogInterface dialog, int which) {
-                }
+                public void onClick(DialogInterface dialog, int which) { }
             });
             AlertDialog alertDialog = DIANoBT.create();
             alertDialog.show();
