@@ -27,7 +27,7 @@ import ca.sunshineboys.it.cropmanagementsystem.R;
 public class ReviewScreen extends AppCompatActivity  implements View.OnClickListener {
 
     private Firebase crop;
-    private EditText reviewName, reviewEmail,reviewPhone;
+    private EditText reviewName, reviewEmail, reviewPhone;
     private TextView reviewUser;
 
 
@@ -39,25 +39,25 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
         crop = Firebase.INSTANCE;
 
 
-
         reviewUser = (Button) findViewById(R.id.reviewbutton);
         reviewUser.setOnClickListener(this);
 
         reviewName = (EditText) findViewById(R.id.reviewEditTextTextName);
         reviewPhone = (EditText) findViewById(R.id.reviewEditTextPhone);
         reviewEmail = (EditText) findViewById(R.id.reviewEditTextTextEmailAddress);
+       // reviewComment =(EditText) findViewById(R.id.reviewEditTextTextComment);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-           // case R.id.castimage:
-               // startActivity(new Intent(this, Login.class));
-               // break;
-           // case R.id.reviewUser:
-               // registerUser();
-             //   break;
+            // case R.id.castimage:
+            // startActivity(new Intent(this, Login.class));
+            // break;
+            // case R.id.reviewUser:
+            // registerUser();
+            //   break;
         }
     }
 
@@ -88,17 +88,15 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
             reviewEmail.requestFocus();
             return;
 
-        }
-
-    }}
+        }}}
 
 /*
-        crop.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+                crop.addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            User user = new User(name, age, email, phone);
+                            User user = new User(name, comment, email, phone);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(Firebase.INSTANCE.getCurrentUser().getUid())
@@ -106,7 +104,7 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(ReviewScreen.this,R.string.user_successfull, Toast.LENGTH_LONG).show();
+                                        Toast.makeText(ReviewScreen.this, R.string.user_successfull, Toast.LENGTH_LONG).show();
                                     } else {
                                         Toast.makeText(ReviewScreen.this, R.string.try_again, Toast.LENGTH_LONG).show();
 
@@ -115,9 +113,10 @@ public class ReviewScreen extends AppCompatActivity  implements View.OnClickList
 
 
                             });
-                        }else{
-                            Toast.makeText(ReviewScreen.this,R.string.failed_register, Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(ReviewScreen.this, R.string.failed_register, Toast.LENGTH_LONG).show();
                         }
                     }
                 });
-    }*/
+    }
+}*/
