@@ -11,16 +11,21 @@ CENG 317 - 0NF
 //The design patterns used in the code are model view
 import android.Manifest;
 import android.app.Dialog;
+import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -41,6 +46,11 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
 /*
 KISS PRINCIPLE, keep it simple and stupid design principle
  */
@@ -52,17 +62,40 @@ public class SunshineMain extends AppCompatActivity {
     Dialog aboutUsPop;
     Dialog reviewPop;
     ImageView ReviewExit;
+    Button reviewSubmit;
+    RatingBar ratingBar;
+    EditText name;
+    EditText email;
+    EditText comment;
+    EditText phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null) {
+            AlertDialog.Builder DIANoBT = new AlertDialog.Builder(this);
+            DIANoBT.setTitle("Device does not support Bluetooth!");
+            DIANoBT.setIcon(R.drawable.alert_icon);
+            DIANoBT.setMessage("Your device does not support bluetooth. Bluetooth is required to run Crop Management! Please switch to a device that supports bluetooth.");
+            DIANoBT.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) { }
+            });
+            AlertDialog alertDialog = DIANoBT.create();
+            alertDialog.show();
+        }
+        if (!bluetoothAdapter.isEnabled()) {
+            requestBluetoothPerms();
+        }
 
      toolbar.setTitleTextColor(getResources().getColor(R.color.Black));
     toolbar.getOverflowIcon().setTint(ContextCompat.getColor(this, R.color.Black));
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -70,8 +103,67 @@ public class SunshineMain extends AppCompatActivity {
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
+//-----------------------------------------------------------------------------/
+        //Review page submitter
+        DatabaseReference users = database.getReference("UserReview");
         ReviewExit = findViewById(R.id.ExitReviewPopupButton);
         AboutusExit = findViewById(R.id.ExitAboutUsPopupButton);
+        reviewSubmit = findViewById(R.id.reviewbutton);
+        ratingBar = findViewById(R.id.simpleRatingBar);
+        name = findViewById(R.id.reviewEditTextTextName);
+        email = findViewById(R.id.reviewEditTextTextEmailAddress);
+        comment = findViewById(R.id.reviewEditTextTextComment);
+        phone = findViewById(R.id.reviewEditTextPhone);
+
+
+
+/*
+        reviewSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String namex = name.getText().toString().trim();
+                String emailx = email.getText().toString().trim();
+                String phonex = phone.getText().toString().trim();
+                String commentx = comment.getText().toString().trim();
+                Float ratingNumber = ratingBar.getRating();
+
+                if (namex.isEmpty()) {
+                    name.setError("Required!");
+                    name.requestFocus();
+                    return;
+                }
+                if (emailx.isEmpty()) {
+                    email.setError("Required!");
+                    email.requestFocus();
+                    return;
+                }
+                if (phonex.isEmpty()) {
+                    phone.setError("Phone number is required");
+                    phone.requestFocus();
+                    return;
+
+
+                }
+                if (commentx.isEmpty()) {
+                    comment.setError("Required!");
+                    comment.requestFocus();
+                    return;
+                }
+                /*
+                DatabaseReference usersRef = users.child("users");
+            Map<String, Object> userx = new HashMap<>();
+           // userx.put(phonex, new User(namex,emailx, commentx,ratingNumber));
+            usersRef.setValue(users);
+
+
+            }
+        });
+*/
+
+
+//-------------------------------------------------------------------------/
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         reviewPop = new Dialog(this);
@@ -116,9 +208,9 @@ public class SunshineMain extends AppCompatActivity {
                 startActivity(new Intent(SunshineMain.this, PopUp.class));
                 return true;
             case R.id.sensor_settings:
-                Toast.makeText(this, R.string.placeholder, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Opening Bluetooth Settings", Toast.LENGTH_SHORT).show();
                 if (ContextCompat.checkSelfPermission(SunshineMain.this, Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED){
-                    //Do Nothing
+                    startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS));
                 } else{
                     requestBluetoothPerms();
                 }

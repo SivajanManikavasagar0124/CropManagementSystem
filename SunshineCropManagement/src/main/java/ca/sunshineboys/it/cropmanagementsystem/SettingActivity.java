@@ -3,6 +3,7 @@ package ca.sunshineboys.it.cropmanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,13 +13,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RatingBar;
+import android.widget.Switch;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -36,8 +42,12 @@ public class SettingActivity extends Fragment {
 
     private SettingViewModel mViewModel;
 
+
     RadioButton fBtn;
     RadioButton cBtn;
+    Switch portlock;
+    Switch notifcationswit;
+    Switch cBlind;
 
     public static SettingActivity newInstance() {
         return new SettingActivity();
@@ -49,9 +59,15 @@ public class SettingActivity extends Fragment {
 
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
         View root = inflater.inflate(R.layout.setting_fragment, container, false);
-
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("settingsPREF", MODE_PRIVATE);
+        SharedPreferences.Editor prefEditor = sharedPreferences.edit();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("fahrenheit");
+        RadioGroup rgUnits;
+
+        portlock = root.findViewById(R.id.portlock);
+        notifcationswit = root.findViewById(R.id.notficswitch);
+        cBlind = root.findViewById(R.id.colourblindswitch);
 
         fBtn = root.findViewById(R.id.fahrenheitButton);
         cBtn = root.findViewById(R.id.celsiusButton);
@@ -59,20 +75,68 @@ public class SettingActivity extends Fragment {
         Snackbar tempChange = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.tempChanged, Snackbar.LENGTH_LONG);
         Snackbar tempChange2 = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.tempChanged2, Snackbar.LENGTH_LONG);
 
+        portlock.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    prefEditor.putBoolean("PortLock", true);
+                    prefEditor.commit();
+                } else {
+                    prefEditor.putBoolean("PortLock", false);
+                    prefEditor.commit();
+                }
+
+            }
+        });
+
+        notifcationswit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    prefEditor.putBoolean("NotificationsOn", true);
+                    prefEditor.commit();
+                } else {
+                    prefEditor.putBoolean("NotificationsOn", false);
+                    prefEditor.commit();
+                }
+
+            }
+
+        });
+
+        cBlind.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    prefEditor.putBoolean("ColourBlind", true);
+                    prefEditor.commit();
+                } else {
+                    prefEditor.putBoolean("ColourBlind", false);
+                    prefEditor.commit();
+                }
+
+            }
+        });
+
+
         if (fBtn.isChecked()) {
+            prefEditor.putBoolean("PrefUnits", false);
             databaseReference.setValue("1", new DatabaseReference.CompletionListener() {
                 @Override
                 public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                     tempChange.show();
                 }
             });
+            prefEditor.commit();
         } else if (cBtn.isChecked()) {
+            prefEditor.putBoolean("PrefUnits", true);
             databaseReference.setValue("0", new DatabaseReference.CompletionListener() {
                 @Override
                 public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                     tempChange2.show();
                 }
             });
+            prefEditor.commit();
         }
 
         return root;
@@ -84,5 +148,7 @@ public class SettingActivity extends Fragment {
         mViewModel = new ViewModelProvider(this).get(SettingViewModel.class);
         // TODO: Use the ViewModel
     }
+
+
 
 }
