@@ -1,6 +1,7 @@
 package ca.sunshineboys.it.cropmanagementsystem;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -76,6 +77,7 @@ public class PopUp extends Activity{
             progressBarHolder.setAnimation(outAnimation);
             progressBarHolder.setVisibility(View.GONE);
             button.setEnabled(true);
+            startActivity(new Intent(PopUp.this, SunshineMain.class));
         }
 
         @Override
