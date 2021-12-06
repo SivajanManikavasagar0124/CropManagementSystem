@@ -78,16 +78,28 @@ public class SettingActivity extends Fragment {
         portlock.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                prefEditor.putBoolean("PortLock", true);
-                prefEditor.commit();
+                if (isChecked) {
+                    prefEditor.putBoolean("PortLock", true);
+                    prefEditor.commit();
+                } else {
+                    prefEditor.putBoolean("PortLock", false);
+                    prefEditor.commit();
+                }
+
             }
         });
 
         notifcationswit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                prefEditor.putBoolean("NotificationsOn", true);
-                prefEditor.commit();
+                if (isChecked) {
+                    prefEditor.putBoolean("NotificationsOn", true);
+                    prefEditor.commit();
+                } else {
+                    prefEditor.putBoolean("NotificationsOn", false);
+                    prefEditor.commit();
+                }
+
             }
 
         });
@@ -95,8 +107,14 @@ public class SettingActivity extends Fragment {
         cBlind.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                prefEditor.putBoolean("ColourBlind", true);
-                prefEditor.commit();
+                if (isChecked) {
+                    prefEditor.putBoolean("ColourBlind", true);
+                    prefEditor.commit();
+                } else {
+                    prefEditor.putBoolean("ColourBlind", false);
+                    prefEditor.commit();
+                }
+
             }
         });
 
