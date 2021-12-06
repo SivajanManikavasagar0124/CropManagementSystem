@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
+import android.widget.RatingBar;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseError;
@@ -54,6 +55,7 @@ public class SettingActivity extends Fragment {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("settingsPREF", MODE_PRIVATE);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("fahrenheit");
+
 
         fBtn = root.findViewById(R.id.fahrenheitButton);
         cBtn = root.findViewById(R.id.celsiusButton);

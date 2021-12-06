@@ -24,6 +24,8 @@
         android:id="@+id/simpleRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:numStars="5"
+        android:outlineAmbientShadowColor="@color/DefaultTitleText"
         android:layout_marginStart="85dp"
         android:layout_marginTop="541dp"
         android:layout_marginEnd="86dp"

@@ -20,7 +20,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -41,6 +44,11 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
 /*
 KISS PRINCIPLE, keep it simple and stupid design principle
  */
@@ -52,6 +60,12 @@ public class SunshineMain extends AppCompatActivity {
     Dialog aboutUsPop;
     Dialog reviewPop;
     ImageView ReviewExit;
+    Button reviewSubmit;
+    RatingBar ratingBar;
+    EditText name;
+    EditText email;
+    EditText comment;
+    EditText phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +77,7 @@ public class SunshineMain extends AppCompatActivity {
     toolbar.getOverflowIcon().setTint(ContextCompat.getColor(this, R.color.Black));
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -70,8 +85,66 @@ public class SunshineMain extends AppCompatActivity {
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
+//-----------------------------------------------------------------------------/
+        //Review page submitter
+        DatabaseReference users = database.getReference("UserReview");
         ReviewExit = findViewById(R.id.ExitReviewPopupButton);
         AboutusExit = findViewById(R.id.ExitAboutUsPopupButton);
+        reviewSubmit = findViewById(R.id.reviewbutton);
+        ratingBar = findViewById(R.id.simpleRatingBar);
+        name = findViewById(R.id.reviewEditTextTextName);
+        email = findViewById(R.id.reviewEditTextTextEmailAddress);
+        comment = findViewById(R.id.reviewEditTextTextComment);
+        phone = findViewById(R.id.reviewEditTextPhone);
+
+
+/*
+
+        reviewSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String namex = name.getText().toString().trim();
+                String emailx = email.getText().toString().trim();
+                String phonex = phone.getText().toString().trim();
+                String commentx = comment.getText().toString().trim();
+                Float ratingNumber = ratingBar.getRating();
+
+                if (namex.isEmpty()) {
+                    name.setError("Required!");
+                    name.requestFocus();
+                    return;
+                }
+                if (emailx.isEmpty()) {
+                    email.setError("Required!");
+                    email.requestFocus();
+                    return;
+                }
+                if (phonex.isEmpty()) {
+                    phone.setError("Phone number is required");
+                    phone.requestFocus();
+                    return;
+
+
+                }
+                if (commentx.isEmpty()) {
+                    comment.setError("Required!");
+                    comment.requestFocus();
+                    return;
+                }
+                DatabaseReference usersRef = users.child("users");
+            Map<String, Object> userx = new HashMap<>();
+           // userx.put(phonex, new User(namex,emailx, commentx,ratingNumber));
+            usersRef.setValue(users);
+
+
+            }
+        });
+
+        */
+
+//-------------------------------------------------------------------------/
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         reviewPop = new Dialog(this);
