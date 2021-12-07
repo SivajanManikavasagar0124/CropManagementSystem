@@ -17,6 +17,16 @@
         android:layout_marginTop="295dp"
         android:src="@drawable/ic_rectsmall" />
 
+    <Button
+        android:id="@+id/savesettingsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsdefault"
+        android:text="Save Settings"
+        android:textAllCaps="false"
+        android:layout_marginTop="625dp"
+        android:layout_marginStart="130dp"/>
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
