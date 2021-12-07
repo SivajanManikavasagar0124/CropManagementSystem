@@ -81,6 +81,8 @@
     <string name="OnboardingPage4Desc">All set to go!!!!!!!!</string>
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
+    <string name="quick"> Quick Start Information</string>
+
     <string name="dry">Dry</string>
     <string name="fahrenheit" translatable="false">Imperial</string>
     <string name="celsius" translatable="false">Metric</string>
