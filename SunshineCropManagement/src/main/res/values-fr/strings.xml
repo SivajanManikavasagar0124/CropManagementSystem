@@ -41,6 +41,16 @@
     <string name="connect_sensors">Connect Sensors</string>
 
     <string name="about_us">Révision</string>
+
+
+    <string name="about_us2">SUNSHINE BOYS 2021</string>
+    <string name="about_us3">Les membres du groupe</string>
+    <string name="onb1"> COMMENCER LA GESTION DES CULTURES</string>
+    <string name="OnboardingPage3Desc">1. Assurez-vous que le capteur affiche connecté sur l\'écran d\'accueil. 2. Sélectionnez le bon capteur. 3. Surveillez les modifications des données de récolte. </string>
+    <string name="OnboardingPage4Desc">Profitez de notre application !!!!! Merci de nous laisser un avis XD</string>
+    <string name="quick"> Informations de démarrage rapide</string>
+    <string name="done"> Configuration terminée</string>
+
     <string name="support">Soutien</string>
     <string name="reviewtext">Laisser un avis</string>
     <string name="reviewName">Nom:</string>
