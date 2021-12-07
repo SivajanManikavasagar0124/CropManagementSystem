@@ -78,11 +78,11 @@
     <string name="OnboardingPage1Desc">Please enable bluetooth permissions if you haven\'t already. If you see your sensor on the screen please select it and move on to the next page.</string>
     <string name="OnboardingPage2Desc">\Hi user! Welcome to the SUNSHINE BOYS Crop Management System App, You\'re almost ready to use your new sensor! In the next few steps we\'ll guide you through the process of setting up your sensor to be used with the app. \</string>
     <string name="OnboardingPage3Desc">1. Make sure sensor shows connected on homescreen. 2. Select correct sensor. 3. Monitor changes of cropdata. </string>
-    <string name="OnboardingPage4Desc">All set to go!!!!!!!!</string>
+    <string name="OnboardingPage4Desc">Enjoy our app!!!!! Please leave us a review XD</string>
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
     <string name="quick"> Quick Start Information</string>
-
+    <string name="done"> Setup Completed</string>
     <string name="dry">Dry</string>
     <string name="fahrenheit" translatable="false">Imperial</string>
     <string name="celsius" translatable="false">Metric</string>
