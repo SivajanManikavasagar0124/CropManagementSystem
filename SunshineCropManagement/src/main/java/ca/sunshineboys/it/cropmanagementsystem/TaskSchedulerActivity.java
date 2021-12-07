@@ -57,7 +57,7 @@ public class TaskSchedulerActivity extends Fragment {
                     DIACVError.setTitle(R.string.noDateSelected);
                     DIACVError.setIcon(R.drawable.tasksche);
                     DIACVError.setMessage(R.string.selectaDate);
-                    DIACVError.setNeutralButton(R.string.ok2, new DialogInterface.OnClickListener() {
+                    DIACVError.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) { }
                     });

@@ -114,11 +114,10 @@
     <string name="tempChanged2">Changé de Fahrenheit à Celsius</string>
     <string name="updatingData">Mise à jour du capteur en ce moment, veuillez patienter.</string>
     <string name="errorUpdating">La mise à jour a échoué, veuillez réessayer.</string>
-    <string name="noDateSelected">No Date Selected</string>
-    <string name="selectaDate">Select a date first!</string>
-    <string name="ok2">OK</string>
-    <string name="addCalendarDate">Add Calendar Date?</string>
-    <string name="addSelectedCalendarDate">Add the selected Calendar date?</string>
-    <string name="addedDate">Added date</string>
+    <string name="noDateSelected">Aucune date sélectionnée</string>
+    <string name="selectaDate">Sélectionnez d\'abord une date !</string>
+    <string name="addCalendarDate">Ajouter la date du calendrier ?</string>
+    <string name="addSelectedCalendarDate">Ajouter la date du calendrier sélectionnée ?</string>
+    <string name="addedDate">Date d\'ajout</string>
 
 </resources>
