@@ -46,8 +46,8 @@
     <string name="about_us2">SUNSHINE BOYS© 2021</string>
     <string name="about_us3">Sunshine Boys</string>
     <string name="onb1"> COMMENCER LA GESTION DES CULTURES</string>
-    <string name="OnboardingPage3Desc">1. Assurez-vous que le capteur affiche connecté sur l\'écran d\'accueil. 2. Sélectionnez le bon capteur. 3. Surveillez les modifications des données de récolte. </string>
-    <string name="OnboardingPage4Desc">Profitez de notre application !!!!! Merci de nous laisser un avis XD</string>
+    <string name="OnboardingPage3Desc">1. Assurez-vous que le capteur affiche connecté sur l\'écran d\'accueil. \n2. Sélectionnez le bon capteur. \n3. Surveillez les modifications des données de récolte.</string>
+    <string name="OnboardingPage4Desc">Profitez de votre application ! S\'il vous plaît laissez un avis et dites-nous ce que nous devons améliorer !</string>
     <string name="quick"> Informations de démarrage rapide</string>
     <string name="done"> Configuration terminée</string>
 
@@ -84,8 +84,8 @@
     <string name="detailed_sensor_data">Detailed Sensor Data</string>
     <string name="home_frag">Home Frag</string>
     <string name="water_now">Water Now</string>
-    <string name="OnboardingPage2Desc"> Veuillez activer les autorisations Bluetooth si vous ne l\'avez pas déjà fait. Si vous voyez votre produit à l\'écran, veuillez le sélectionner et passer à la page suivante.</string>
-    <string name="OnboardingPage1Desc">\"Salut! Bienvenue dans l\'application Crop Management System, vous êtes presque prêt à utiliser votre nouveau produit ! Au cours des prochaines étapes, nous vous guiderons tout au long du processus de configuration de votre capteur à utiliser avec l\'application.\"</string>
+    <string name="OnboardingPage2Desc">\ Salut l\'utilisateur ! Bienvenue dans l\'application du système de gestion des cultures SUNSHINE BOYS, vous êtes presque prêt à utiliser votre nouveau capteur ! Au cours des prochaines étapes, nous vous guiderons tout au long du processus de configuration de votre capteur à utiliser avec l\'application. \</string>
+    <string name="OnboardingPage1Desc">Veuillez activer les autorisations Bluetooth si vous ne l\'avez pas déjà fait. Si vous voyez votre capteur à l\'écran, veuillez le sélectionner et passer à la page suivante</string>
     <string name="welcome1">Bienvenu</string>
     <string name="connectsensor">Connectez-vous à votre capteur</string>
     <string name="prefTemp">Choisissez votre échelle de température préférée</string>
