@@ -29,7 +29,7 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
     int images[] = {
-           R.drawable.alert_icon, R.drawable.alert_icon, R.drawable.alert_icon, R.drawable.alert_icon
+           R.drawable.sunny, R.drawable.alert_icon, R.drawable.alert_icon, R.drawable.alert_icon
     };
     int headings[] = {
             R.string.welcome1, R.string.connectsensor, R.string.placeholder, R.string.placeholder

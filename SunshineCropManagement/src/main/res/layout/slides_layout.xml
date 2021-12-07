@@ -6,41 +6,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<ImageView
-android:id="@+id/slider_image"
-    android:layout_width="230dp"
-    android:layout_height="280dp"
-    android:layout_marginTop="50dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-<TextView
-android:id="@+id/slider_header"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Text"
-    android:textSize="23sp"
-    android:gravity="center"
-    android:textColor="@color/Black"
-    android:textAlignment="center"
-    android:includeFontPadding="false"
-    android:layout_marginTop="15dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.497"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/slider_image" />
-<TextView
-android:id="@+id/slider_desc"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAlignment="center"
-    android:textSize="14sp"
-    android:gravity="center"
-    android:layout_marginTop="20dp"
-    android:textColor="@color/Black"
-    android:text="Text"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/slider_header" />
+
+    <ImageView
+        android:id="@+id/slider_image"
+        android:layout_width="291dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/slider_header"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Text"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_image" />
+
+    <TextView
+        android:id="@+id/slider_desc"
+        android:layout_width="252dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Text"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_header" />
     </androidx.constraintlayout.widget.ConstraintLayout>
