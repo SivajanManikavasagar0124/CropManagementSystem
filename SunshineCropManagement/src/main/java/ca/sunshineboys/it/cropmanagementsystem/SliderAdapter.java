@@ -36,9 +36,9 @@ public class SliderAdapter extends PagerAdapter {
     };
     int descriptions[] = {
           R.string.OnboardingPage2Desc,
-           R.string.OnboardingPage1Desc,
-          R.string.placeholder,
-          R.string.placeholder
+            R.string.OnboardingPage1Desc,
+          R.string.OnboardingPage3Desc,
+          R.string.OnboardingPage4Desc
     };
     @Override
     public int getCount() {

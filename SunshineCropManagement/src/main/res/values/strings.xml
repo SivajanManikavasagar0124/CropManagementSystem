@@ -43,7 +43,7 @@
     <string name="about_us">About Us</string>
     <string name="about_us2">SUNSHINE BOYS 2021</string>
     <string name="about_us3">Group Members</string>
-
+    <string name="onb1"> START CROP MANAGEMENT</string>
 
     <string name="support">Review</string>
     <string name="reviewtext">Leave a Review</string>
@@ -77,6 +77,8 @@
     <string name="water_now">Water Now</string>
     <string name="OnboardingPage1Desc">Please enable bluetooth permissions if you haven\'t already. If you see your product on the screen please select it and move on to the next page.</string>
     <string name="OnboardingPage2Desc">\"Hi! Welcome to the Crop Management System App, You\'re almost ready to use your new product! In the next few steps we\'ll guide you through the process of setting up your sensor to be used with the app. \"</string>
+    <string name="OnboardingPage3Desc">Water Now</string>
+    <string name="OnboardingPage4Desc">Water Now</string>
     <string name="welcome1">Welcome!</string>
     <string name="connectsensor">Connect to your sensor</string>
     <string name="dry">Dry</string>
