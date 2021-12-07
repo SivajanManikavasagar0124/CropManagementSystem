@@ -30,7 +30,7 @@ public class ReviewScreen extends AppCompatActivity {
             Users usr = new Users(editName.getText().toString(),editPhone.getText().toString(),editEmail.getText().toString(),editComment.getText().toString(),ratingBar.getRating());
             dad.add(usr).addOnSuccessListener(suc->{
 
-                Toast.makeText(this, "Review went through!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "@string/toastReview", Toast.LENGTH_SHORT).show();
 
             }).addOnFailureListener(er->
             {

@@ -48,6 +48,8 @@
     <string name="reviewPhone">Téléphone:</string>
     <string name="reviewEmail">Messagerie électronique:</string>
     <string name="reviewButton">Envoyer</string>
+    <string name="toastReview"></string>
+
 
     <string name="report_a_bug">Signaler un bogue</string>
     <string name="waterlevel">Water Level</string>

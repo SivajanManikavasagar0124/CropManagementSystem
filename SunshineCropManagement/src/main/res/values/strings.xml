@@ -49,6 +49,7 @@
     <string name="reviewPhone">Phone:</string>
     <string name="reviewEmail">Email:</string>
     <string name="reviewButton">Submit</string>
+    <string name="toastReview">Review went through!</string>
 
     <string name="report_a_bug">Report a Bug</string>
     <string name="waterlevel">Water Level</string>
