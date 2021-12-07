@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -48,6 +49,7 @@ public class SettingActivity extends Fragment {
     Switch portlock;
     Switch notifcationswit;
     Switch cBlind;
+    Button saveButton;
 
     public static SettingActivity newInstance() {
         return new SettingActivity();
@@ -71,52 +73,39 @@ public class SettingActivity extends Fragment {
 
         fBtn = root.findViewById(R.id.fahrenheitButton);
         cBtn = root.findViewById(R.id.celsiusButton);
+        saveButton = root.findViewById(R.id.savesettingsbutton);
 
         Snackbar tempChange = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.tempChanged, Snackbar.LENGTH_LONG);
         Snackbar tempChange2 = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.tempChanged2, Snackbar.LENGTH_LONG);
 
-        portlock.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
+            public void onClick(View v) {
+                if (portlock.isChecked()){
                     prefEditor.putBoolean("PortLock", true);
                     prefEditor.commit();
-                } else {
+                }else{
                     prefEditor.putBoolean("PortLock", false);
                     prefEditor.commit();
                 }
-
-            }
-        });
-
-        notifcationswit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
+                if (notifcationswit.isChecked()){
                     prefEditor.putBoolean("NotificationsOn", true);
                     prefEditor.commit();
-                } else {
+                }else{
                     prefEditor.putBoolean("NotificationsOn", false);
                     prefEditor.commit();
                 }
-
-            }
-
-        });
-
-        cBlind.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
+                if (cBlind.isChecked()){
                     prefEditor.putBoolean("ColourBlind", true);
                     prefEditor.commit();
-                } else {
+                }else{
                     prefEditor.putBoolean("ColourBlind", false);
                     prefEditor.commit();
                 }
 
             }
         });
+
 
 
         if (fBtn.isChecked()) {

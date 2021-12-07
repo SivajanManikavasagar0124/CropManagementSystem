@@ -81,6 +81,7 @@ CENG 317 - 0NF
         android:id="@+id/NohaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:layout_marginStart="145dp"
         android:layout_marginTop="560dp"
         android:text="@string/NohaB1" />

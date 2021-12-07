@@ -81,6 +81,7 @@
         android:layout_marginStart="138dp"
         android:layout_marginTop="302dp"
         android:layout_marginEnd="138dp"
+        android:textAllCaps="false"
         android:background="@color/purple_500"
         android:fontFamily="@font/poppinsdefault"
         android:text="@string/send_report" />
