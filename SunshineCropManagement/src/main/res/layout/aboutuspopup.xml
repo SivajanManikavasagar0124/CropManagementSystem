@@ -7,34 +7,20 @@
     android:background="@drawable/bg_gradient">
 
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="317dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="317dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/croplogo" />
-
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="194dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="481dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="189dp"
-        android:gravity="center"
+        android:layout_width="282dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="529dp"
         android:fontFamily="@font/poppinsdefault"
-        android:textColor="@color/LogoTextColour"
-        android:text="Sunshine Boys 2021"
+        android:gravity="center"
+        android:text="@string/about_us2"
+        android:textColor="@color/YellowGreen"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,13 +29,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
         android:layout_marginEnd="363dp"
         android:layout_marginBottom="683dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:onClick="AboutUsPopupExit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="410dp"
+        android:layout_height="249dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="336dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aboutus" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="208dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="408dp"
+        android:text="@string/about_us3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
