@@ -58,7 +58,7 @@
     <string name="reviewPhone">Téléphone:</string>
     <string name="reviewEmail">Messagerie électronique:</string>
     <string name="reviewButton">Envoyer</string>
-    <string name="toastReview"></string>
+    <string name="toastReview">L\'examen est passé !</string>
     <string name="TSTV1"> Planifier une tâche</string>
     <string name="TSTV2"> date</string>
     <string name="taskdone"> CALENDRIER TÂCHE</string>
@@ -114,5 +114,11 @@
     <string name="tempChanged2">Changé de Fahrenheit à Celsius</string>
     <string name="updatingData">Mise à jour du capteur en ce moment, veuillez patienter.</string>
     <string name="errorUpdating">La mise à jour a échoué, veuillez réessayer.</string>
+    <string name="noDateSelected">No Date Selected</string>
+    <string name="selectaDate">Select a date first!</string>
+    <string name="ok2">OK</string>
+    <string name="addCalendarDate">Add Calendar Date?</string>
+    <string name="addSelectedCalendarDate">Add the selected Calendar date?</string>
+    <string name="addedDate">Added date</string>
 
 </resources>

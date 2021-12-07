@@ -118,5 +118,11 @@
     <string name="updatingData">Currently updating data from the sensor.</string>
 
     <string name="errorUpdating">Unable to update sensor please try again.</string>
+    <string name="noDateSelected">No Date Selected</string>
+    <string name="selectaDate">Select a date first!</string>
+    <string name="ok2">OK</string>
+    <string name="addCalendarDate">Add Calendar Date?</string>
+    <string name="addSelectedCalendarDate">Add the selected Calendar date?</string>
+    <string name="addedDate">Added date</string>
 
 </resources>

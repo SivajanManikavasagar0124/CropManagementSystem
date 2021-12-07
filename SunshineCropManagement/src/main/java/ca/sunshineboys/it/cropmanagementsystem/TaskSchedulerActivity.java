@@ -54,10 +54,10 @@ public class TaskSchedulerActivity extends Fragment {
             public void onClick(View view) {
                 if (CV.isSelected()){
                     AlertDialog.Builder DIACVError = new AlertDialog.Builder(getActivity());
-                    DIACVError.setTitle("No Date Selected");
+                    DIACVError.setTitle(R.string.noDateSelected);
                     DIACVError.setIcon(R.drawable.tasksche);
-                    DIACVError.setMessage("Select a date first!");
-                    DIACVError.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    DIACVError.setMessage(R.string.selectaDate);
+                    DIACVError.setNeutralButton(R.string.ok2, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) { }
                     });
@@ -68,14 +68,14 @@ public class TaskSchedulerActivity extends Fragment {
                 }else {
 
                     AlertDialog.Builder DIACVChecker = new AlertDialog.Builder(getActivity());
-                    DIACVChecker.setTitle("Add Calendar Date?");
+                    DIACVChecker.setTitle(R.string.addCalendarDate);
                     DIACVChecker.setIcon(R.drawable.tasksche);
-                    DIACVChecker.setMessage("Add the selected Calendar date?");
-                    DIACVChecker.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    DIACVChecker.setMessage(R.string.addSelectedCalendarDate);
+                    DIACVChecker.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dateSelected = CV.getDate();
-                            Snackbar dateSnack = Snackbar.make(getActivity().findViewById(android.R.id.content),"Added date", Snackbar.LENGTH_SHORT);
+                            Snackbar dateSnack = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.addedDate, Snackbar.LENGTH_SHORT);
                             dateSnack.show();
 
                         }
