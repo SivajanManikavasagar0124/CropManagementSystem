@@ -23,6 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CropManagementSystem">
         <activity
+            android:name=".ui.ReviewScreen"
+            android:exported="true" />
+        <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
