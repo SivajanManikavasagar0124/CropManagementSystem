@@ -59,7 +59,9 @@
     <string name="reviewEmail">Messagerie électronique:</string>
     <string name="reviewButton">Envoyer</string>
     <string name="toastReview"></string>
-
+    <string name="TSTV1"> Planifier une tâche</string>
+    <string name="TSTV2"> date</string>
+    <string name="taskdone"> CALENDRIER TÂCHE</string>
 
     <string name="report_a_bug">Signaler un bogue</string>
     <string name="waterlevel">Water Level</string>

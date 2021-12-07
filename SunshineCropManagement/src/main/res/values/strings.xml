@@ -44,7 +44,9 @@
     <string name="about_us2">SUNSHINE BOYS 2021</string>
     <string name="about_us3">Group Members</string>
     <string name="onb1"> START CROP MANAGEMENT</string>
-
+    <string name="TSTV1"> Schedule a Task</string>
+    <string name="TSTV2"> date</string>
+    <string name="taskdone"> SCHEDULE TASK</string>
     <string name="support">Review</string>
     <string name="reviewtext">Leave a Review</string>
     <string name="reviewName">Name:</string>
