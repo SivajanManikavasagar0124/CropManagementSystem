@@ -18,26 +18,28 @@ CENG 317 - 0NF
     android:padding="20dp">
 
 
-<androidx.viewpager.widget.ViewPager
-android:id="@+id/slider"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
-    </androidx.viewpager.widget.ViewPager>
-<Button
-android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/skip_btn"
-    android:text=""
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:background="#00000000"
-    android:textColor="@color/white"
-    android:onClick="skip"
-    android:fontFamily="" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"></androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/skip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:fontFamily=""
+        android:onClick="skip"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 <RelativeLayout
 android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
@@ -78,6 +80,7 @@ android:id="@+id/dots"
         android:text="Next"
         android:textAllCaps="false"
         android:textColor="@color/Black"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        tools:ignore="TouchTargetSizeCheck" />
     </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
