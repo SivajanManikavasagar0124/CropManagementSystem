@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.CalendarView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -33,7 +34,8 @@ CENG 317 - 0NF
  */
 public class TaskSchedulerActivity extends Fragment {
 
-
+    FloatingActionButton fab;
+    long dateSelected;
     private TaskSchedulerViewModel mViewModel;
 
 
@@ -45,34 +47,48 @@ public class TaskSchedulerActivity extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.task_scheduler_fragment, container, false);
-        CalendarView CV = (CalendarView) view.findViewById(R.id.calendarView);
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        CalendarView CV = view.findViewById(R.id.calendarView);
+        fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fab.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        new AlertDialog.Builder(getActivity())
-                                .setTitle(R.string.requiredperm)
-                                .setIcon(R.drawable.alert_icon)
-                                .setMessage(R.string.permissionrequiredforblue)
-                                .setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
+                if (CV.isSelected()){
+                    AlertDialog.Builder DIACVError = new AlertDialog.Builder(getActivity());
+                    DIACVError.setTitle("No Date Selected");
+                    DIACVError.setIcon(R.drawable.tasksche);
+                    DIACVError.setMessage("Select a date first!");
+                    DIACVError.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) { }
+                    });
+                    DIACVError.create();
+                    DIACVError.show();
 
-                                    }
-                                })
-                                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
-                                    }
-                                })
-                                .create().show();
-                    }
 
-                });
+                }else {
+
+                    AlertDialog.Builder DIACVChecker = new AlertDialog.Builder(getActivity());
+                    DIACVChecker.setTitle("Add Calendar Date?");
+                    DIACVChecker.setIcon(R.drawable.tasksche);
+                    DIACVChecker.setMessage("Add the selected Calendar date?");
+                    DIACVChecker.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dateSelected = CV.getDate();
+                            Snackbar dateSnack = Snackbar.make(getActivity().findViewById(android.R.id.content),"Added date", Snackbar.LENGTH_SHORT);
+                            dateSnack.show();
+
+                        }
+                    })
+                            .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                    DIACVChecker.create();
+                    DIACVChecker.show();
+
+                }
             }
         });
         return view;
