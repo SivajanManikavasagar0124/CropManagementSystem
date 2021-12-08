@@ -6,10 +6,10 @@ public class PrimeJU
  {
   PrimeJU test = new PrimeJU();
   int num = 7;
-  String solution = test.PrimeJU(num);
+  String solution = test.Prime(num);
   System.out.println(num + solution);
  }
- public String PrimeJU(int num)
+ public String Prime(int num)
  {
   boolean prime = false;
   String solution;
