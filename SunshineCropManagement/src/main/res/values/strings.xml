@@ -133,5 +133,9 @@
     <string name="adjust_application_settings_here">Adjust application settings here!</string>
     <string name="settingsSave">Save Settings</string>
     <string name="colour_blind_mode">Colour Blind Mode</string>
+    <string name="soilmoisture">Soil Moisture</string>
+    <string name="croptemp">Crop Temperature</string>
+    <string name="airhumid">Air Humidity</string>
+    <string name="openingbluetooth">Opening Bluetooth Settings</string>
 
 </resources>

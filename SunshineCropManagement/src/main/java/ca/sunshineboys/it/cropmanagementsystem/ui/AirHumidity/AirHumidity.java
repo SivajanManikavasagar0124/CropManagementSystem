@@ -46,7 +46,7 @@ public class AirHumidity extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 new ViewModelProvider(this).get(HumidityViewModel.class);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Air Humidity");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.airhumid);
         View root = inflater.inflate(R.layout.fragment_airhumidity, container, false);
 
         firebaseDatabase = FirebaseDatabase.getInstance();

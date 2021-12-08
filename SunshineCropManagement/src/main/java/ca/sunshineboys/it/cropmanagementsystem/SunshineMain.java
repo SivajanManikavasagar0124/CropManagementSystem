@@ -109,23 +109,9 @@ public class SunshineMain extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
         reviewPop = new Dialog(this);
         aboutUsPop = new Dialog(this);
-        DatabaseReference mDatabase;
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-              //  String value = snapshot.getValue(String.class);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
 
     }
-    public void showAboutUsDiag(View v){
 
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -149,7 +135,7 @@ public class SunshineMain extends AppCompatActivity {
                 startActivity(new Intent(SunshineMain.this, PopUp.class));
                 return true;
             case R.id.sensor_settings:
-                Toast.makeText(this, "Opening Bluetooth Settings", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.openingbluetooth, Toast.LENGTH_SHORT).show();
                 if (ContextCompat.checkSelfPermission(SunshineMain.this, Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED){
                     startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS));
                 } else{

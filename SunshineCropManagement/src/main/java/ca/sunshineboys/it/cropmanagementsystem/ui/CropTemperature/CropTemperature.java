@@ -53,7 +53,7 @@ public class CropTemperature extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
                 new ViewModelProvider(this).get(TemperatureViewModel.class);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Crop Temperature");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.croptemp);
         View root = inflater.inflate(R.layout.fragment_croptemperature, container, false);
 
         firebaseDatabase = FirebaseDatabase.getInstance();

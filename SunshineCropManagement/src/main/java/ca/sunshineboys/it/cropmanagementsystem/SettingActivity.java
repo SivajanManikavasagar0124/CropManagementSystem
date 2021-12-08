@@ -59,7 +59,7 @@ public class SettingActivity extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.settings);
         View root = inflater.inflate(R.layout.setting_fragment, container, false);
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("settingsPREF", MODE_PRIVATE);
         SharedPreferences.Editor prefEditor = sharedPreferences.edit();

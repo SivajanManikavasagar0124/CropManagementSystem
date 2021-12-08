@@ -225,12 +225,7 @@ public class HomeFragment extends Fragment {
         });
 
 
-        /*homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
 
-            }
-        });*/
         return root;
     }
 }

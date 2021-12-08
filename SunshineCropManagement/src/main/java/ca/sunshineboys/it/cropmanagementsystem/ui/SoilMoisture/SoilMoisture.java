@@ -46,7 +46,7 @@ public class SoilMoisture extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
                 new ViewModelProvider(this).get(MoistureViewModel.class);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Soil Moisture");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.soilmoisture);
         View root = inflater.inflate(R.layout.fragment_soilmoisture, container, false);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
