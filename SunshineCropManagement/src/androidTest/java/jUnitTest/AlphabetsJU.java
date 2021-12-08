@@ -1,4 +1,5 @@
-package ca.sunshineboys.it.cropmanagementsystem;
+package jUnitTest;
+
 
 public class AlphabetsJU
 {

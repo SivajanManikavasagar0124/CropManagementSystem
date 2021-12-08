@@ -1,4 +1,4 @@
-package ca.sunshineboys.it.cropmanagementsystem;
+package jUnitTest;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -37,11 +37,12 @@ public class JUNIT4testcases
   assertEquals(expected,actual);
  }
  @Test
- public void Flip()
+ public void Reverse()
  {
-  FlipJU t5 = new FlipJU ();
-  String actual = t5.Flip("hanoj");
-  String expected = "jonah";
+  StringReverse reversetest = new StringReverse();
+  String actual = reversetest.reverse("sunshine");
+  String expected = "enihsnus";
   assertEquals(expected,actual);
+
  }
 }
