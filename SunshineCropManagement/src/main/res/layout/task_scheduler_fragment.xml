@@ -19,11 +19,13 @@ CENG 317 - 0NF
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="@string/fab_content_desc"
         app:srcCompat="@drawable/ic_plus"
         app:fabSize="auto" />
+
+
 
 <ImageView
     android:layout_width="wrap_content"
@@ -51,16 +53,14 @@ CENG 317 - 0NF
         android:layout_marginStart="32dp"
         android:layout_marginTop="210dp"
         />
-<!--
     <TextView
-        android:id="@+id/Currenttask"
-        android:layout_width="297dp"
-        android:layout_height="197dp"
-        android:layout_gravity="start|bottom"
-        android:text="@string/currently_scheduled_for"
-        android:textColor="@color/Black"
-        android:textSize="25sp"
-        android:textStyle="italic" />
--->
+        android:id="@+id/textViewTaskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="95dp"
+        android:text="@string/add_a_date_and_the_app_will_automatically_water_your_plant_on_selected_dates"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 
 </FrameLayout>

@@ -128,5 +128,10 @@
     <string name="emailBlank">Email is blank!</string>
     <string name="commentsBlank">Comments are blank!</string>
     <string name="dateError">Error adding Date! Try again later.</string>
+    <string name="water_level_currently_in_storage_container_will_be_displayed_below">Water level currently in storage container will be displayed below.</string>
+    <string name="add_a_date_and_the_app_will_automatically_water_your_plant_on_selected_dates">Add a date and the app will automatically water your plant on selected dates.</string>
+    <string name="adjust_application_settings_here">Adjust application settings here!</string>
+    <string name="settingsSave">Save Settings</string>
+    <string name="colour_blind_mode">Colour Blind Mode</string>
 
 </resources>

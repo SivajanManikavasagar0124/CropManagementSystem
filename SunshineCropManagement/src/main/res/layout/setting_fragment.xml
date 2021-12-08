@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsdefault"
-        android:text="Save Settings"
+        android:text="@string/settingsSave"
         android:textAllCaps="false"
         android:layout_marginTop="625dp"
         android:layout_marginStart="130dp"/>
@@ -84,6 +84,8 @@
         android:src="@drawable/ic_vectorrectangle"
         android:layout_marginStart="10dp"
         android:layout_marginTop="455dp"/>
+
+
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -98,7 +100,7 @@
         android:textColor="@color/DefaultTitleText"
         android:layout_marginTop="393dp"
         android:fontFamily="@font/poppinsdefault"
-        android:text="Colour Blind Mode"
+        android:text="@string/colour_blind_mode"
         />
 
     <RadioGroup
@@ -160,4 +162,14 @@
         android:layout_marginStart="210dp"
         android:layout_marginTop="393dp"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="95dp"
+        android:text="@string/adjust_application_settings_here"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 </RelativeLayout>

@@ -13,6 +13,16 @@
         android:layout_marginTop="39dp"
         android:src="@drawable/ic_sensorinfo" />
 
+    <TextView
+        android:id="@+id/textViewwaterlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="95dp"
+        android:text="@string/water_level_currently_in_storage_container_will_be_displayed_below"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
