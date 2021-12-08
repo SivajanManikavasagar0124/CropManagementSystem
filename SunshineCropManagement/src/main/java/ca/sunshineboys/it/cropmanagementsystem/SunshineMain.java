@@ -104,66 +104,7 @@ public class SunshineMain extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
-//-----------------------------------------------------------------------------/
-        //Review page submitter
-        DatabaseReference users = database.getReference("UserReview");
-        ReviewExit = findViewById(R.id.ExitReviewPopupButton);
-        AboutusExit = findViewById(R.id.ExitAboutUsPopupButton);
-        reviewSubmit = findViewById(R.id.reviewbutton);
-        ratingBar = findViewById(R.id.simpleRatingBar);
-        name = findViewById(R.id.reviewEditTextTextName);
-        email = findViewById(R.id.reviewEditTextTextEmailAddress);
-        comment = findViewById(R.id.reviewEditTextTextComment);
-        phone = findViewById(R.id.reviewEditTextPhone);
 
-
-
-/*
-        reviewSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String namex = name.getText().toString().trim();
-                String emailx = email.getText().toString().trim();
-                String phonex = phone.getText().toString().trim();
-                String commentx = comment.getText().toString().trim();
-                Float ratingNumber = ratingBar.getRating();
-
-                if (namex.isEmpty()) {
-                    name.setError("Required!");
-                    name.requestFocus();
-                    return;
-                }
-                if (emailx.isEmpty()) {
-                    email.setError("Required!");
-                    email.requestFocus();
-                    return;
-                }
-                if (phonex.isEmpty()) {
-                    phone.setError("Phone number is required");
-                    phone.requestFocus();
-                    return;
-
-
-                }
-                if (commentx.isEmpty()) {
-                    comment.setError("Required!");
-                    comment.requestFocus();
-                    return;
-                }
-                /*
-                DatabaseReference usersRef = users.child("users");
-            Map<String, Object> userx = new HashMap<>();
-           // userx.put(phonex, new User(namex,emailx, commentx,ratingNumber));
-            usersRef.setValue(users);
-
-
-            }
-        });
-*/
-
-
-//-------------------------------------------------------------------------/
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         reviewPop = new Dialog(this);
@@ -220,8 +161,7 @@ public class SunshineMain extends AppCompatActivity {
                 aboutUsPop.show();
                 return true;
             case R.id.support_settings:
-                reviewPop.setContentView(R.layout.fragment_review);
-                reviewPop.show();
+                startActivity(new Intent(SunshineMain.this, ReviewScreen.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

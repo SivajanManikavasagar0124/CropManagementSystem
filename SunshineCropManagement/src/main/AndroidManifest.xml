@@ -22,9 +22,7 @@
         android:roundIcon="@mipmap/sunshine_boys_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CropManagementSystem">
-        <activity
-            android:name=".ui.ReviewScreen"
-            android:exported="true" />
+
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashTheme">
@@ -45,6 +43,8 @@
         <activity
             android:name=".PopUp"
             android:theme="@style/PopUpWindow" />
+        <activity
+            android:name=".ReviewScreen" />
     </application>
 
 </manifest>

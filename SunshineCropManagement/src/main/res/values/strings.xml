@@ -123,5 +123,9 @@
     <string name="addCalendarDate">Add Calendar Date?</string>
     <string name="addSelectedCalendarDate">Add the selected Calendar date?</string>
     <string name="addedDate">Added date</string>
+    <string name="blankname">Name is blank!</string>
+    <string name="phoneNoBlank">Phone No. is blank!</string>
+    <string name="emailBlank">Email is blank!</string>
+    <string name="commentsBlank">Comments are blank!</string>
 
 </resources>
