@@ -21,8 +21,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /*
 Sivajan Manikavasagar (Team Leader) N01240148
@@ -37,6 +41,8 @@ public class TaskSchedulerActivity extends Fragment {
     FloatingActionButton fab;
     long dateSelected;
     private TaskSchedulerViewModel mViewModel;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    final DatabaseReference dateAdder = database.getReference().child("TaskScheDates");
 
 
     public static TaskSchedulerActivity newInstance() {
@@ -49,6 +55,8 @@ public class TaskSchedulerActivity extends Fragment {
         View view = inflater.inflate(R.layout.task_scheduler_fragment, container, false);
         CalendarView CV = view.findViewById(R.id.calendarView);
         fab = view.findViewById(R.id.fab);
+        Snackbar dateSnack = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.addedDate, Snackbar.LENGTH_LONG);
+        Snackbar dateSnackERROR = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.dateError, Snackbar.LENGTH_LONG);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,8 +83,18 @@ public class TaskSchedulerActivity extends Fragment {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dateSelected = CV.getDate();
-                            Snackbar dateSnack = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.addedDate, Snackbar.LENGTH_SHORT);
-                            dateSnack.show();
+                            dateAdder.child("dates").setValue(dateSelected).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    dateSnack.show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    dateSnackERROR.show();
+                                }
+                            });
+
 
                         }
                     })

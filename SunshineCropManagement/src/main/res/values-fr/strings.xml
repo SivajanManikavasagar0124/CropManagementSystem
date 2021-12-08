@@ -119,5 +119,10 @@
     <string name="addCalendarDate">Ajouter la date du calendrier ?</string>
     <string name="addSelectedCalendarDate">Ajouter la date du calendrier sélectionnée ?</string>
     <string name="addedDate">Date d\'ajout</string>
+    <string name="blankname">Nom blank!</string>
+    <string name="phoneNoBlank">Telephone est blank!</string>
+    <string name="emailBlank">Email est blank!</string>
+    <string name="commentsBlank">Comment est blank!</string>
+    <string name="dateError">la date est blank!</string>
 
 </resources>

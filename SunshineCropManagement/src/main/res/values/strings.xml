@@ -127,5 +127,6 @@
     <string name="phoneNoBlank">Phone No. is blank!</string>
     <string name="emailBlank">Email is blank!</string>
     <string name="commentsBlank">Comments are blank!</string>
+    <string name="dateError">Error adding Date! Try again later.</string>
 
 </resources>
