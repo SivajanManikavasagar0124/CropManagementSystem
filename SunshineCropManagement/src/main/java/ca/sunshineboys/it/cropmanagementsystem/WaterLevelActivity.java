@@ -75,7 +75,7 @@ public class WaterLevelActivity extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 double value = snapshot.getValue(Double.class);
-                waterText.setText(value + getActivity().getString(R.string.percent));
+                waterText.setText(value + "cm");
                 sensorUpdating.show();
             }
 

@@ -75,7 +75,7 @@ public class AirHumidity extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 double value = snapshot.getValue(Double.class);
-                humidityText.setText(value + getActivity().getString(R.string.percent));
+                humidityText.setText(value + "%");
                 humidBar.setProgress((int)value);
                 sensorUpdating.show();
             }

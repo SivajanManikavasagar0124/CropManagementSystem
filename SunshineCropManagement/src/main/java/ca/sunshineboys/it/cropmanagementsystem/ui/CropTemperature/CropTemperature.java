@@ -88,7 +88,7 @@ public class CropTemperature extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 double value = snapshot.getValue(Double.class);
-                tempText.setText(value + getActivity().getString(R.string.c));
+                tempText.setText(value + "c");
                 sensorUpdating.show();
 
             }
