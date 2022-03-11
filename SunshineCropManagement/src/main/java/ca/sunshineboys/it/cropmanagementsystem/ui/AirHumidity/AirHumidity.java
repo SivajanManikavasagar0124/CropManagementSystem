@@ -40,7 +40,7 @@ public class AirHumidity extends Fragment {
     TextView humidityText;
     ProgressBar humidBar;
 
-    int val;
+    float val;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -71,13 +71,12 @@ public class AirHumidity extends Fragment {
     private void getData() {
         Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.errorUpdating,Snackbar.LENGTH_SHORT);
         Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.updatingData,Snackbar.LENGTH_SHORT);
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
-                humidityText.setText(value + getString(R.string.percent));
-                val = Integer.parseInt(value);
-                humidBar.setProgress(val);
+                double value = snapshot.getValue(Double.class);
+                humidityText.setText(value + getActivity().getString(R.string.percent));
+                humidBar.setProgress((int)value);
                 sensorUpdating.show();
             }
 

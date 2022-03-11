@@ -77,14 +77,22 @@ public class SoilMoisture extends Fragment {
     private void getData() {
         Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.errorUpdating,Snackbar.LENGTH_SHORT);
         Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.updatingData,Snackbar.LENGTH_SHORT);
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
-                soilText.setText(value + getString(R.string.x));
+                double value = snapshot.getValue(Double.class);
+                if (value == 1) {
+                    soilText.setText("Y");
+
+                } else if(value == 0) {
+                    soilText.setText("N");
+
+                }else{
+                    soilText.setText("ERROR");
+                }
+
                 sensorUpdating.show();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 sensorError.show();

@@ -43,9 +43,9 @@ public class CropTemperature extends Fragment {
     TextView tempText;
     Button tempButt;
 
-    double val;
-    double fahr;
-    int fahren;
+    float val;
+    float fahr;
+    float fahren;
 
     Long num = Long.valueOf(1);
 
@@ -84,30 +84,13 @@ public class CropTemperature extends Fragment {
     private void getData() {
         Snackbar sensorError = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.errorUpdating,Snackbar.LENGTH_SHORT);
         Snackbar sensorUpdating = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.updatingData,Snackbar.LENGTH_SHORT);
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
-                val = Double.parseDouble(value);
+                double value = snapshot.getValue(Double.class);
+                tempText.setText(value + getActivity().getString(R.string.c));
                 sensorUpdating.show();
-                unit.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String data = snapshot.getValue(String.class);
-                        if (data.equals("1")) {
-                            fahr = val * 1.8 + 32;
-                            fahren = (int) fahr;
-                            tempText.setText(fahren + getString(R.string.f));
-                        } else {
-                            tempText.setText(value + getString(R.string.c));
-                        }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
             }
 
             @Override

@@ -137,5 +137,7 @@
     <string name="croptemp">Crop Temperature</string>
     <string name="airhumid">Air Humidity</string>
     <string name="openingbluetooth">Opening Bluetooth Settings</string>
+    <string name="deviceblue">Device does not support Bluetooth!</string>
+    <string name="devicesupportblue">Your device does not support bluetooth. Bluetooth is required to run Crop Management! Please switch to a device that supports bluetooth.</string>
 
 </resources>
