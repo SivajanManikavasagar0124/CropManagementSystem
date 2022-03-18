@@ -49,13 +49,6 @@ CENG 317 - 0NF
         android:textColor="@color/black"
         android:textSize="39dp" />
 
-    <ImageView
-        android:layout_width="275dp"
-        android:layout_height="275dp"
-        android:src="@drawable/ic_vectorcircle"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="287dp"/>
-
     <TextView
         android:id="@+id/soilunits"
         android:layout_width="wrap_content"
@@ -66,7 +59,7 @@ CENG 317 - 0NF
         android:gravity="center"
         android:text="@string/soilunit"
         android:textColor="@color/DefaultTitleText"
-        android:textSize="90dp" />
+        android:textSize="50sp" />
 
     <TextView
         android:id="@+id/soildescription"

@@ -45,13 +45,6 @@ CENG 317 - 0NF
         android:src="@drawable/ic_sensorbox"
         android:layout_marginTop="210dp" />
 
-    <ImageView
-        android:layout_width="275dp"
-        android:layout_height="275dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/ic_vectorcircle" />
-
     <ProgressBar
         android:id="@+id/progressBarAirHumid"
         android:layout_width="315dp"
@@ -94,7 +87,7 @@ CENG 317 - 0NF
         android:gravity="center"
         android:text="@string/percent"
         android:textColor="@color/DefaultTitleText"
-        android:textSize="90dp" />
+        android:textSize="50sp" />
 
     <TextView
         android:id="@+id/airHumidityTextView"

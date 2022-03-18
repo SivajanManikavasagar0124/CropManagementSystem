@@ -54,13 +54,6 @@
         android:textColor="@color/black"
         android:textSize="40dp" />
 
-    <ImageView
-        android:layout_width="275dp"
-        android:layout_height="275dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="280dp"
-        android:src="@drawable/ic_vectorcircle"/>
-
     <TextView
         android:id="@+id/waterlevelPercent"
         android:layout_width="wrap_content"
@@ -71,7 +64,7 @@
         android:gravity="center"
         android:text="@string/percent"
         android:textColor="@color/DefaultTitleText"
-        android:textSize="90dp" />
+        android:textSize="50sp" />
 
 
 </RelativeLayout>
