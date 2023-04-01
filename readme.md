@@ -1,6 +1,6 @@
 # Crop Management System
 
-The Crop Management System project by The Sunshine Boys brings the convenience of everyday farming to the 21st century. The system is designed to automatically care for crops 
+The Crop Management System project brings the convenience of everyday farming to the 21st century. The system is designed to automatically care for crops 
 and makes it easier to monitor the health of plants on your phone. 
 ## Sivajan Manikavasagar n01240148
 Team leader in charge of delegation, app development, and planning.  
@@ -14,4 +14,4 @@ Documentation and Product design.
 Hardware selection, testing, and engineering.
 
 
-### Sunshine Boys
+
